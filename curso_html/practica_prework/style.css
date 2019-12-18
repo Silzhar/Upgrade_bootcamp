@@ -1,0 +1,28 @@
+.header{
+    padding: 10px;
+    padding-bottom: 15px;
+    text-align: right;
+    border-bottom: 1px #5f5b5b solid;
+}
+.header div{
+    display: inline;
+    margin-right: 10px;
+    border: 1px solid;
+    padding: 10px;
+}
+.cuerpo{
+    width: 100%;
+    height: 600px;
+    background-color: #fabada;
+}
+.cuerpo img{
+    display: block;
+    margin: 0 auto;
+}
+.footer{
+    height: 20%;
+    border: 1px solid;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
