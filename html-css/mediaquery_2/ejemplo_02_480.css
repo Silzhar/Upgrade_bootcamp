@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.contenedor{
+    background-color:blueviolet;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contenido{
+    background-color:purple;
+    width: 100%;
+    height: 200px;
+    margin-top: 2rem;
+}

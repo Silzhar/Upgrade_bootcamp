@@ -1,0 +1,20 @@
+.contenedor{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenido{
+    height: 100px;
+    width: 100px;
+    background-color: orangered;
+}
+
+.orden{
+    order: 4;
+    background-color: purple;
+}

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.contenedor{
+    background-color:blueviolet;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contenido{
+    background-color:purple;
+    width: 100%;
+    height: 200px;
+    margin-top: 2rem;
+}
+ /* Media querys controla los puntos de ruptura
+ según el dispositivo. */
+@media (min-width: 768px)and (width: 989px){
+    .contenido{
+        width: 50%;
+        float: left;
+    }
+    .contenido:first-child{
+        border-right: 20px solid green;
+    }
+    .contenido:nth-child(2){
+        border-left: 20px  solid yellow;
+    }
+    .contenido:last-child{
+        background-color:aqua;
+        width: 100%;
+    }
+}
+
+@media (min-width: 990px){
+    .contenido{
+        width: 33%;
+        float: left;
+    }
+}
