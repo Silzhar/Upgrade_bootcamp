@@ -1,0 +1,17 @@
+div {
+    box-sizing: border-box;
+    color: white;
+    padding: 42px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    transition: all 1s ease;
+}
+
+div:hover {
+    background-color: orange;
+    color: black;
+    width: 500px;
+    height: 200px;
+}
