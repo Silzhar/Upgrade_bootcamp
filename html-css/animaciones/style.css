@@ -1,4 +1,4 @@
-body div {
+div{
     position: relative;
     left: 0;
     top: 0;
@@ -9,15 +9,21 @@ body div {
     width: 100px;
     height: 100px;
     background-color: purple;
-    transition: left 3s ,width 3s 3s, top 3s 6s;
 }
 
-body:hover div{
-    top: 100px;
-    left: 100px;
-    width: 400px;
+div:hover{
+    animation: traslacion 3s;
+    animation-direction: reverse;
     background-color: rgba(207, 80, 7, 0.918);
     color: black;
 
 }
 
+@keyframes traslacion{
+    from{
+        left: 0;
+    }
+    to{
+        left: 500px;
+    }
+}
