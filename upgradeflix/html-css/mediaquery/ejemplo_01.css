@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.contenedor {
+  background-color: blue;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contenido {
+  background-color: #fabada;
+  height: 300px;
+  margin-top: 2rem;
+  width:100%;
+}
+
+@media (min-width: 768px) and (max-width: 989px){
+  .contenido {
+    width: 50%;
+    float: left;
+  }
+  .contenido:first-child {
+    border-right: 5px solid white;
+  }
+  .contenido:nth-child(2) {
+    border-left: 5px solid white;
+  }
+  .contenido:last-child {
+    background-color: aqua;
+    width: 100%;
+  }
+}
+@media (min-width: 990px){
+  .contenido {
+    width: 30%;
+    float: left;
+  }
+}

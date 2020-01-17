@@ -1,0 +1,20 @@
+body div {
+  position: relative;
+  left: 0;
+  top:0;
+  box-sizing: border-box;
+  color: white;
+  padding-top: 38px;
+  text-align: center;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  transition: left 3s, width 3s 3s, top 3s 6s;
+  /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+}
+body:hover div {
+  left: 100px;
+  width: 200px;
+  top: 100px
+
+}

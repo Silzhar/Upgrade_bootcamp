@@ -1,0 +1,32 @@
+div {
+  position: relative;
+  left: 0;
+  top:0;
+  box-sizing: border-box;
+  color: white;
+  padding-top: 38px;
+  text-align: center;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  animation: traslacion 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 3;
+  animation-fill-mode: backwards;
+}
+  
+@keyframes traslacion {
+  0%{
+    left: 0;
+  }
+  70%{
+    left: 0;
+  }
+  80%{
+    left: 100px;
+
+  }
+  100%{
+    left: 500px;
+  }
+}
