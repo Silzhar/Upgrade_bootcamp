@@ -31,7 +31,8 @@ article{
 } */
 
 .cabecera{
-    background-color: rgb(116, 119, 116);
+    background-color: black;
+    border: 4px solid grey;
     display: flex;
     padding: 0 .5rem .5rem;
     flex-direction: column;
@@ -49,13 +50,16 @@ article{
 }
 
 .cabecera h1{
+    color: aliceblue;
     margin: .5rem;
 }
 
 .posicion{
+    border:4px solid rgb(54, 52, 52);
+    background-color: white;
     cursor: pointer;
     right: 1rem;
-    top: .5rem;
+    top: .8rem;
     font-size: 2rem;
     position: absolute;
 }
