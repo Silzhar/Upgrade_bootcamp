@@ -6,24 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Luis Ruiz Fernández</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="/css/icons.css">
 </head>
 <body>
-    <main>
-        <header>
+    <main class="contenedor">
+        <label class="posicion icon-menu" for="menu"></label>
+        <input type="checkbox" id="menu">
+        <header class="cabecera">
             <h1>Luis Ruiz Fernández</h1>
+
             <nav class="menu_nav">
                 <ul>
-                    <li>Inicio</li>
-                    <li>CV</li>
-                    <li>Contacto</li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <article id="inicio">
             <h2>Sobre mi</h2>
             <section class="personal">
-                <figure>
+                <figure class="foto-perfil">
                     <img src="./img/guybrush.jpeg" alt="mi foto de perfil">
+                    <figcaption>
+                        Foto de perfil
+                    </figcaption>
                 </figure>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Quod doloremque praesentium totam quidem sunt eius dolor quibusdam fugit,
@@ -32,8 +40,12 @@
             <section class="aficciones"></section>
             <section class="otros_datos"></section>
         </article>
-        <article id="cv"></article>
-        <article id="contacto"></article>
+        <article id="cv">
+            <h2>CV</h2>
+        </article>
+        <article id="contacto">
+            <h2>Contacto</h2>
+        </article>
     </main>
 </body>
 </html>

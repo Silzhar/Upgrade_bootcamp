@@ -1,0 +1,82 @@
+.div-purple {
+  color: purple;
+  font-size: 80px;
+}
+
+.contenedor {
+  padding: 20vh;
+  background-color: black;
+  border: 8px solid #615d5d;
+}
+
+.contenedor h1 {
+  color: red;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.contenedor h1:hover {
+  color: seagreen;
+  border: 2px solid springgreen;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+}
+
+.search-form {
+  color: springgreen;
+}
+
+.search-form__boton-primario {
+  color: steelblue;
+}
+
+.search-form__boton-primario--disabled {
+  color: thistle;
+}
+
+.search-form__boton-primario--error {
+  border: tomato;
+}
+
+.col-1 {
+  width: 100%;
+  background-color: springgreen;
+}
+
+.col-2 {
+  width: 50%;
+  background-color: springgreen;
+}
+
+.col-3 {
+  width: 33.33333%;
+  background-color: springgreen;
+}
+
+.col-4 {
+  width: 25%;
+  background-color: springgreen;
+}
+
+.col-5 {
+  width: 20%;
+  background-color: springgreen;
+}
+
+.col-6 {
+  width: 16.66667%;
+  background-color: springgreen;
+}
+
+.col-7 {
+  width: 14.28571%;
+  background-color: springgreen;
+}
+
+.col-8 {
+  width: 12.5%;
+  background-color: springgreen;
+}
+/*# sourceMappingURL=style.css.map */

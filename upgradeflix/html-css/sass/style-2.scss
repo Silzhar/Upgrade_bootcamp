@@ -1,0 +1,21 @@
+.search-form{
+    color: springgreen;
+    &__boton-primario {
+        color: steelblue;
+        &--disabled{
+            color: thistle;
+        }
+        &--error{
+            border: tomato;
+        }
+    }
+}
+
+@for $i from 1 through 8 {
+    $width : percentage(1 / $i);
+
+    .col-#{$i} {
+        width : $width;
+        background-color: springgreen;
+    }
+}

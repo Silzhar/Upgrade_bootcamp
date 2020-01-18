@@ -1,0 +1,51 @@
+@mixin titulos-principales {
+    color: red;
+    font-size: 2rem;
+    text-decoration:underline;
+}
+
+$color-purple: purple;
+$primary-color: black;
+
+.div-purple{
+    color: $color-purple;
+    font-size: 80px;
+}
+
+.contenedor{
+    padding: 20vh;
+    background-color: $primary-color;
+    border: 8px solid rgb(97, 93, 93);
+    h1{
+        @include titulos-principales;
+
+        &:hover{
+            color: seagreen;
+            border: 2px solid springgreen;
+            transform: rotate(360deg);
+            transition-duration: 4s;
+        }
+    }
+}
+
+.search-form{
+    color: springgreen;
+    &__boton-primario {
+        color: steelblue;
+        &--disabled{
+            color: thistle;
+        }
+        &--error{
+            border: tomato;
+        }
+    }
+}
+
+@for $i from 1 through 8 {
+    $width : percentage(1 / $i);
+
+    .col-#{$i} {
+        width : $width;
+        background-color: springgreen;
+    }
+}

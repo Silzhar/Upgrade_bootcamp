@@ -1,3 +1,9 @@
+@import'reset.css';
+
+*::before::after{
+    box-sizing: border-box;
+}
+
 ul{
     list-style-type: none;
     padding: 0;
@@ -5,13 +11,76 @@ ul{
     justify-content: flex-end;
 }
 
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+article{
+    min-height: 100vh;
+}
+
 .menu_nav ul{
     display: flex;
     justify-content: space-evenly;
-    width: 200px;
 }
 
-header{
+/* header{
     display: flex;
     justify-content: space-between;
+} */
+
+.cabecera{
+    background-color: rgb(116, 119, 116);
+    display: flex;
+    padding: 0 .5rem .5rem;
+    flex-direction: column;
+    height: 48px;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+#menu{
+    display: none;
+}
+
+#menu:checked+.cabecera{
+    height: 80px;
+}
+
+.cabecera h1{
+    margin: .5rem;
+}
+
+.posicion{
+    cursor: pointer;
+    right: 1rem;
+    top: .5rem;
+    font-size: 2rem;
+    position: absolute;
+}
+
+.personal .foto-perfil{
+    margin: .5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.foto-perfil img{
+    width: 100%;
+}
+
+figcaption{
+    font-size: .9rem;
+    text-align: center;
+    color: black;
+}
+
+@media(min-width: 480px) {
+    .personal{
+        display: flex;
+    }
+    .personal p{
+        width: 50%;
+    }
 }

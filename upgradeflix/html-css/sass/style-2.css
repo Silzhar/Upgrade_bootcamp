@@ -1,0 +1,56 @@
+.search-form {
+  color: springgreen;
+}
+
+.search-form__boton-primario {
+  color: steelblue;
+}
+
+.search-form__boton-primario--disabled {
+  color: thistle;
+}
+
+.search-form__boton-primario--error {
+  border: tomato;
+}
+
+.col-1 {
+  width: 100%;
+  background-color: springgreen;
+}
+
+.col-2 {
+  width: 50%;
+  background-color: springgreen;
+}
+
+.col-3 {
+  width: 33.33333%;
+  background-color: springgreen;
+}
+
+.col-4 {
+  width: 25%;
+  background-color: springgreen;
+}
+
+.col-5 {
+  width: 20%;
+  background-color: springgreen;
+}
+
+.col-6 {
+  width: 16.66667%;
+  background-color: springgreen;
+}
+
+.col-7 {
+  width: 14.28571%;
+  background-color: springgreen;
+}
+
+.col-8 {
+  width: 12.5%;
+  background-color: springgreen;
+}
+/*# sourceMappingURL=style-2.css.map */
