@@ -90,15 +90,15 @@ figcaption{
     left: 40px;
     top: 0;
     width: 100px;
-    height: 100px;
+    height: 80px;
     box-sizing: border-box;
     transition: left 4s,top 8s  ;
 }
 
 .foto-perfil:hover > figcaption{
-    top: 74px;
+    top: 40px;
     left:180px;
-    right: 80px;
+    right: 40px;
     font-size: 20px;
     color: purple;
     animation: mov 6s;
@@ -110,6 +110,9 @@ figcaption{
     }
     .personal p{
         width: 50%;
+    }
+    .cabecera{
+        display: flexbox;
     }
 }
 
