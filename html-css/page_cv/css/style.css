@@ -116,3 +116,14 @@ figcaption{
     }
 }
 
+@media(min-width: 768px)and (width: 989px){
+    .personal{
+        display: flexbox;
+        width: min-content;
+    }
+}
+
+@media(min-width: 990px){
+    
+}
+
