@@ -102,16 +102,12 @@ mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 
-mysql> alter table pedidos add foreing key(codCliente) refenences clientes(Id);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) refenences clientes(Id)' at line 1
-mysql> drop pedidos codCliente;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pedidos codCliente' at line 1
+
 mysql> ALTER TABLE pedidos DROP CodCliente;
 Query OK, 0 rows affected (0.10 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> alter table pedidos add foreing key(codCliente) refenences clientes(Id);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) refenences clientes(Id)' at line 1
 mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
 | Field         | Type        | Null | Key | Default | Extra |
@@ -137,14 +133,10 @@ mysql> describe clientes;
 +------------+-------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 
-mysql> ALTER TABLE pedidos ADD codCliente;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 mysql> alter table pedidos  add codCliente varchar(10);
 Query OK, 0 rows affected (0.05 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-mysql> alter table pedidos add foreing key(codCliente) refenences clientes(Id);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) refenences clientes(Id)' at line 1
 mysql> describe pedidos
     -> ;
 +---------------+-------------+------+-----+---------+-------+
@@ -159,8 +151,6 @@ mysql> describe pedidos
 +---------------+-------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 
-mysql> describe clietes;
-ERROR 1146 (42S02): Table 'bootcamp.clietes' doesn't exist
 mysql> describe clientes;
 +------------+-------------+------+-----+---------+-------+
 | Field      | Type        | Null | Key | Default | Extra |
@@ -187,16 +177,10 @@ mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 
-mysql> alter table pedidos add foreing key(codCliente) refenences clientes(codCliente);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) refenences clientes(codCliente)' at line 1
-mysql> alter table pedidos add foreing key(codCliente) references clientes(Id);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) references clientes(Id)' at line 1
 mysql> alter table pedidos add foreign key(codCliente) references clientes(Id);
 Query OK, 0 rows affected (0.21 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-mysql> insert into clientes values ("0000000001", "Belen", "Portal", 23, "belen@hotmail.com");
-ERROR 1136 (21S01): Column count doesn't match value count at row 1
 mysql> alter table clientes drop codCliente;
 Query OK, 0 rows affected (0.13 sec)
 Records: 0  Duplicates: 0  Warnings: 0
@@ -273,10 +257,6 @@ mysql> select * from clientes;
 +------------+---------------+----------+------+--------------------------------+-----------+
 5 rows in set (0.00 sec)
 
-mysql> update clientes set categoria"usuario";
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"usuario"' at line 1
-mysql> update clientes set=categoria"usuario";
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=categoria"usuario"' at line 1
 mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
 | Field         | Type        | Null | Key | Default | Extra |
@@ -310,8 +290,6 @@ mysql> select Nombre, apellido from clientes where apellido like"%por%";
 +--------+----------+
 1 row in set (0.00 sec)
 
-mysql> sellect * from clientes order by nombre;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sellect * from clientes order by nombre' at line 1
 mysql> select * from clientes order by nombre;
 +------------+---------------+----------+------+--------------------------------+-----------+
 | Id         | nombre        | apellido | edad | email                          | categoria |
@@ -328,8 +306,6 @@ mysql> update clientes set categoria="usuario";
 Query OK, 5 rows affected (0.02 sec)
 Rows matched: 5  Changed: 5  Warnings: 0
 
-mysql> update clientes set categoria="usuario" where nombre as Belen="classic";
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as Belen="classic"' at line 1
 mysql> update clientes set categoria="Classic" where Nombre="Belen";
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
@@ -398,7 +374,6 @@ mysql> describe productos;
 
 mysql> update clientes set categoria"usuario";
 
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERTINTOproductos VALUES('c01','Cepillo abrillantar',2.50,'2017-11-02')' at line 1
 mysql> INSERT INTO productos VALUES('c01','Cepillo abrillantar',2.50,'2017-11-02');
 Query OK, 1 row affected (0.01 sec)
 
@@ -413,8 +388,6 @@ mysql> INSERT INTO productos VALUES('p02','Pegamento industrial',14.50,'2017-10-
 Query OK, 6 rows affected (0.02 sec)
 Records: 6  Duplicates: 0  Warnings: 0
 
-mysql> describe * productos;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* productos' at line 1
 mysql> describe productos;
 +-----------+---------------------+------+-----+---------+-------+
 | Field     | Type                | Null | Key | Default | Extra |
