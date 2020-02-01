@@ -27,31 +27,11 @@ mysql> show databases;
 +--------------------+
 5 rows in set (0.01 sec)
 
-mysql> use databases Database;
-ERROR 1049 (42000): Unknown database 'databases'
-mysql> use Database;
-ERROR 1049 (42000): Unknown database 'Database'
-mysql> describe Database;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Database' at line 1
-mysql> use Database;
-ERROR 1049 (42000): Unknown database 'Database'
-mysql> use database;
-ERROR 1049 (42000): Unknown database 'database'
-mysql> use Database;
-ERROR 1049 (42000): Unknown database 'Database'
 mysql> use bootcamp;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
-Database changed
-mysql> describe bootcamp;
-ERROR 1146 (42S02): Table 'bootcamp.bootcamp' doesn't exist
-mysql> describe clentes;
-ERROR 1146 (42S02): Table 'bootcamp.clentes' doesn't exist
-mysql> show bootcamp;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bootcamp' at line 1
-mysql> describe bootcamp;
-ERROR 1146 (42S02): Table 'bootcamp.bootcamp' doesn't exist
+
 mysql> show tables;
 +--------------------+
 | Tables_in_bootcamp |
@@ -60,8 +40,7 @@ mysql> show tables;
 +--------------------+
 1 row in set (0.00 sec)
 
-mysql> describe clentes;
-ERROR 1146 (42S02): Table 'bootcamp.clentes' doesn't exist
+
 mysql> describe clientes;
 +----------+-------------+------+-----+---------+-------+
 | Field    | Type        | Null | Key | Default | Extra |
@@ -78,19 +57,6 @@ mysql> alter table clientes add primary key(Id);
 Query OK, 0 rows affected (0.15 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-mysql> create table visitante(
-    -> codvisit varchar(10),
-    -> codTienda varchar(12),
-    -> nombre varchar(30),
-    -> edad tinyint unsigned,
-    -> sexo char,
-    -> domicilio varchar(30),
-    -> ciudad varchar(20),
-    -> telefono varchar(11),
-    -> montocompra float unsigned,
-    -> primary key (codvisit),
-    -> foreing key (codTienda) references tienda(codigo);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key (codTienda) references tienda(codigo)' at line 12
 mysql> create table pedidos(numPedido varchar(10) primary key, empresa_envio varchar(20), fecha date, precio float(4,2), unidades integer(3));
 Query OK, 0 rows affected, 2 warnings (0.08 sec)
 
@@ -106,19 +72,6 @@ mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
 5 rows in set (0.01 sec)
 
-mysql> alter table pedidos add foreing key(codCliente) refenences clientes(Id);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'key(codCliente) refenences clientes(Id)' at line 1
-mysql> alter table codCliende;
-ERROR 1146 (42S02): Table 'bootcamp.codCliende' doesn't exist
-mysql> alter table add codCliente add varchar(10);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add codCliente add varchar(10)' at line 1
-mysql> alter table add codCliente add varchar(10);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add codCliente add varchar(10)' at line 1
-mysql> alter table codCliente add varchar(10);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varchar(10)' at line 1
-mysql> alter table clientes add codCliente varchar(10);
-Query OK, 0 rows affected (0.06 sec)
-Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> describe pedidos;
 +---------------+-------------+------+-----+---------+-------+
