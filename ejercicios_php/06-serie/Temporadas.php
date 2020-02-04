@@ -5,9 +5,10 @@
 class Temporadas{
 
     protected $temporada1_2005;
+    private $year;
+    private $capitulos = [];
 
-
-    public function __construct($temporada1_2005){
+    public function __construct(string $temporada1_2005){
 
         $this->temporada1 = $temporada1_2005;
 
@@ -30,7 +31,7 @@ class Temporadas{
 
             $temporada1_JSON = json_encode($temporada);
 
-            file_put_contents($temporada1_2005, $temporada1JSON);
+            file_put_contents($temporada1_2005, $temporada1_JSON);
         }
     }
 
@@ -40,6 +41,11 @@ class Temporadas{
 
     public function addCapitulo($temporada1_2005){
         fwrite($this->temporada1_2005, $nuevoCapitulo);
+    }
+
+    public function getTotalCapitulos():int{
+
+        return count($this->capitulos);
     }
 }
 
