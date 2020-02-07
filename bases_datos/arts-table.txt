@@ -1,0 +1,128 @@
+mysql> create database martialARTS;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| martialARTS        |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use martialARTS;
+Database changed
+mysql> status;
+--------------
+mysql  Ver 14.14 Distrib 5.7.29, for Linux (i686) using  EditLine wrapper
+
+Connection id:		5
+Current database:	martialARTS
+Current user:		root@localhost
+SSL:			Not in use
+Current pager:		stdout
+Using outfile:		''
+Using delimiter:	;
+Server version:		5.7.29-0ubuntu0.18.04.1 (Ubuntu)
+Protocol version:	10
+Connection:		Localhost via UNIX socket
+Server characterset:	latin1
+Db     characterset:	latin1
+Client characterset:	utf8
+Conn.  characterset:	utf8
+UNIX socket:		/var/run/mysqld/mysqld.sock
+Uptime:			43 min 28 sec
+
+Threads: 1  Questions: 21  Slow queries: 0  Opens: 107  Flush tables: 1  Open tables: 100  Queries per second avg: 0.008
+--------------
+
+
+mysql> create table arts(style varchar(30),
+    -> origin varchar(30),
+    -> dateOrigin integer,
+    -> weapons varchar(80));
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_martialARTS |
++-----------------------+
+| arts                  |
++-----------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> alter table arts modify dateOrigin date;
+Query OK, 0 rows affected (0.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe arts;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| style      | varchar(30) | YES  |     | NULL    |       |
+| origin     | varchar(30) | YES  |     | NULL    |       |
+| dateOrigin | date        | YES  |     | NULL    |       |
+| weapons    | varchar(80) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table arts modify style varchar(30) not null primary key;
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> alter table arts add Id varchar(10);
+Query OK, 0 rows affected (0.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+Query OK, 0 rows affected (0.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe arts;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| style      | varchar(30) | NO   | PRI | NULL    |       |
+| origin     | varchar(30) | YES  |     | NULL    |       |
+| dateOrigin | date        | YES  |     | NULL    |       |
+| weapons    | varchar(80) | YES  |     | NULL    |       |
+| Id         | varchar(10) | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+mysql> insert into arts values ("Judo", "Japan", "1890-01-01", "no", "0001");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> 
+mysql> select * from arts;
++-------+--------+------------+---------+------+
+| style | origin | dateOrigin | weapons | Id   |
++-------+--------+------------+---------+------+
+| Judo  | Japan  | 1890-01-01 | no      | 0001 |
++-------+--------+------------+---------+------+
+1 row in set (0.00 sec)
+ 
+
+ mysql> alter table arts modify founder varchar(30) after origin;
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe arts;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| style      | varchar(30) | NO   | PRI | NULL    |       |
+| origin     | varchar(30) | YES  |     | NULL    |       |
+| founder    | varchar(30) | YES  |     | NULL    |       |
+| dateOrigin | date        | YES  |     | NULL    |       |
+| weapons    | varchar(80) | YES  |     | NULL    |       |
+| Id         | varchar(10) | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
