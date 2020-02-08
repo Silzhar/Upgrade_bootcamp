@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-    mysql:
+    mysql-php:
         image: mysql
         command: 
           - --default-authentication-plugin=mysql_native_password
@@ -14,7 +14,7 @@ services:
         ports:
           - "8002:3306"
 
-    webserver:
+    webserver-mysql:
         build: .
         working_dir: /var/www/html
         volumes:

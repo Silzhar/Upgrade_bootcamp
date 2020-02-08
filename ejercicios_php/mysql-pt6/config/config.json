@@ -1,0 +1,7 @@
+{
+    "host": "mysql-php",
+    "user": "user",
+    "pass": "pass",
+    "db": "demo",
+    "port": 3306
+}

@@ -1,21 +1,30 @@
 <?php
+require '../vendor/autoload.php';
 
-$dsn = "mysql:host=mysql;dbname=demo;port=3306;charset=utf8mb4";
+use Upflix\Db;
+
+$config = json_decode(file_get_contents('../config/config.json'), true);
+
+$db = new Db($config);
+
+$orden = $_GET['sort'];
+
 try {
-  $pdo = new PDO($dsn, "user", "pass"); //opciones opcionales
-  echo "CONECT";
-} catch (Exception $e) {
-  echo $e->getMessage();
+    $peliculas = $db->getPeliculas($orden);
+} catch (\Exception $e) {
+    die("ERROR AL OBTENER LAS PELICULAS");
 }
 
-$pdo->exec("CREATE TABLE empleado(
-    per int NOT NULL, 
-    nombre varchar(255), 
-    apellido1 varchar(255), 
-    depto int NOT NULL, 
-    PRIMARY KEY (per)  
-    )");
+$tpl = file_get_contents('../templates/index.tpl');
 
-if (!$result){
-    print_r($pdo->errorInfo());
+$tpl = str_replace('##PELICULAS##', createTableRows($peliculas) ,$tpl);
+
+echo $tpl;
+
+function createTableRows($peliculas) {
+    $contenido = '';
+    foreach ($peliculas as $pelicula) {
+        $contenido.="<tr><td><a href='#'> {$pelicula->titulo}</a></td><td>{$pelicula->descripcion}</td></tr>";
+    }
+    return $contenido;
 }
