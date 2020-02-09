@@ -1,6 +1,6 @@
 version: "3.1"
 services:
-    mysql-symfony:
+    mysql:
         image: mysql:8.0
         command: mysqld --default-authentication-plugin=mysql_native_password
         volumes:
@@ -12,7 +12,7 @@ services:
             - MYSQL_PASSWORD=pass
         ports:
             - "8002:3306"
-    webserver-symfony:
+    webserver:
         image: nginx:alpine
         working_dir: /application
         volumes:
@@ -21,7 +21,7 @@ services:
         ports:
             - "8000:80"
 
-    php-symfony:
+    php:
         build: phpdocker/php-fpm
         working_dir: /application
         volumes:
