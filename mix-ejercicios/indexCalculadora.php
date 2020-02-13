@@ -13,10 +13,10 @@
             <input type="number" placeholder="numerero2">
         </form>
     </div>
-    <?php
+    <!-- <?php
 
-    $numero1 = x;
-    $numero2 = y;
+    $numero1 = htmlspecialchars("numero1");
+    $numero2 = htmlspecialchars("numero2");
 
     $suma = $numero1 + $numero2;
 
@@ -26,6 +26,6 @@
 
     $division = $numero1 / $nuemro2;
 
-    ?>
+    ?> -->
 </body>
 </html>
