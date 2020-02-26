@@ -1,0 +1,83 @@
+1- docker run --name mi_mongo -d mongo
+
+2 - docker ps 
+
+    // Para entrar en terminal. mi_mongo es el nombre asignado.
+3 - docker exec -it mi_mongo mongo
+
+    // es = a  show databases, show databases tambien funciona.
+4 - show dbs;
+
+    // No existe la tabla. Aún así la "crea" internamente vacía.
+5 -  use comics;
+
+    // Al crear la primera inserción se crea la base de datos.
+6 - db.marvel.insert({"titulo":"Los vengadores","año":2005});
+    WriteResult({ "nInserted" : 1 })
+
+    // Insert de varios documentos.
+7 -  db.marvel.insertMany([{"titulo":"Spiderman","año":2000},{"titulo":"Spiderman2", "año": 2008}]);
+
+    // Para buscar .
+8 -  db.marvel.find()
+
+    // Buscar organizado.
+9-  db.marvel.find().pretty();
+
+    // Insert incluyendo un array.
+10 -  db.marvel.insert({"titulo":"Los vengadores","personajes":["Hulk", "Ironman", "Thor"]});
+
+    // Obtener fecha 
+11 -  ObjectId("5e50f0b38dad01e36fa357b2").getTimestamp();
+        ISODate("2020-02-22T09:13:23Z")
+
+    // Buscar mas concreto.
+12 -  db.marvel.find({"año":2005}).pretty();
+    {
+	"_id" : ObjectId("5e50ed2c8dad01e36fa357af"),
+	"titulo" : "Los vengadores",
+	"año" : 2005
+
+    // Buscar todo menos un dato.
+    - db.marvel.find({"titulo":"Los vengadores"},{"año":1}).pretty();
+        { "_id" : ObjectId("5e50ed2c8dad01e36fa357af"), "año" : 2005 }
+        { "_id" : ObjectId("5e50f0b38dad01e36fa357b2") }
+        { "_id" : ObjectId("5e50f24c8dad01e36fa357b3") }
+
+    // Buscar todo de un campo.
+     db.marvel.find({}, {"titulo":1});
+    { "_id" : ObjectId("5e50ed2c8dad01e36fa357af"), "titulo" : "Los vengadores" }
+    { "_id" : ObjectId("5e50eeed8dad01e36fa357b0"), "titulo" : "Spiderman" }
+    { "_id" : ObjectId("5e50eeed8dad01e36fa357b1"), "titulo" : "Spiderman2" }
+    { "_id" : ObjectId("5e50f0b38dad01e36fa357b2"), "titulo" : "Los vengadores" }
+    { "_id" : ObjectId("5e50f24c8dad01e36fa357b3"), "titulo" : "Los vengadores" }
+
+    // Buscar todo ,indistinto mayusculas / minusculas.
+     db.marvel.find({"titulo":/spiderman/i}, {"titulo":1});
+    { "_id" : ObjectId("5e50eeed8dad01e36fa357b0"), "titulo" : "Spiderman" }
+    { "_id" : ObjectId("5e50eeed8dad01e36fa357b1"), "titulo" : "Spiderman2" }
+
+    // Todos los jose:
+    db.personas.find({"nombre":/jose/i}).pretty();
+
+    // Mayor que 38.
+    db.personas.find({"nombre":/jose/i},{"edad":38}).pretty();
+
+    // Solo jose y 38.
+    db.personas.find({"nombre":/jose/i,"edad":38}).pretty();
+
+    // Todos los emails de relaccionados con nombre maria
+    db.personas.find({"nombre":/maria/i}, {"email":1}).pretty();
+
+    // Contar alumnos.
+    db.personas.find().count();
+
+    // Contar alumnos nombre Maria.
+    db.personas.find({"nombre":/maria/i}).count();
+
+    // Ver alumnos.
+    db.personas.find().pretty();
+
+    // Nombre del que corresponde al email.
+    db.personas.find({"email":"maria@mercedes.com"},{"nombre":1});
+
