@@ -1,8 +1,9 @@
 <?php
 
+
 namespace Upflix;
 
-class Pelicula
+class Pelicula 
 {
     public $titulo;
     public $descripcion;

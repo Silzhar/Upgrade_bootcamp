@@ -8,33 +8,52 @@
 </head>
 <body>
     <div>
-        <form action="calculadora">
+        <label action="calculadora" method="POST">
             <input type="number" placeholder="numero1">
             <input type="number" placeholder="numerero2">
-            <input type="text" placeholder="proceso">
-        </form>
+            <input  name="proceso" type="text" placeholder="proceso">
+            <input type="submit" value="CALCULAR">
+        </label>
     </div>
     <?php
 
-    $numero1 = "munero1";
-    $numero2 = "numero2";
-    $proceso = "";
+    $numero1 = 8;
+    $numero2 = 4;
+    // $proceso = htmlspecialchars($_POST["proceso"]);
+    $proceso = "+";
 
+    // Primer modo.
     switch($proceso){
         case  "+":
             $suma = $numero1 + $numero2;
-            echo "La suma es : $suma";
+            echo "La suma es : $suma <br>";
         case "-":
             $resta = $numero1 - $numero2;
-            echo "La resta es : $resta";
+            echo "La resta es : $resta <br>";
         case "*":
             $producto = $numero1 * $numero2;
-            echo "El producto es : $producto";
+            echo "El producto es : $producto <br>";
         case "/":
-            $division = $numero1 / $nuemro2;
-            echo "La división es : $division";
+            $division = $numero1 / $numero2;
+            echo "La división es : $division <br>";
     }
+    
+    echo "segunda version o segundo ejercicio <br>";
+    // Segundo modo.
 
+    if ( $proceso == "+") {
+        $suma = $numero1 + $numero2;
+        echo "La suma es : $suma <br>";
+    } elseif ($proceso == "-") {
+        $resta = $numero1 - $numero2;
+        echo "La resta es : $resta <br>";
+    } elseif ($proceso == "*") {
+        $producto = $numero1 * $numero2;
+        echo "El producto es : $producto <br>";
+    } elseif ($proceso == "/") {
+        $division = $numero1 / $numero2;
+        echo "La división es : $division <br>";
+    }
     ?>
 </body>
 </html>
