@@ -8,15 +8,24 @@
 <body>
     <p>25/02/2020</p>
     <p class="buttons"></p>
-    <input type="button" value="NINJA" onclick="ninja()">
-    <input type="button" value="NINJADEAD" onclick="ninjadead()">
-    <img src="/01-ejercicioWeb/smiley-alien-emoticon-youtube-clip-art-ninja.jpg">
-    <img src="/01-ejercicioWeb/smiley-emoticon-desktop-wallpaper-clip-art-ninja.jpg">
+    <input type="submit" value="NINJA !" onclick="ninja()">
+    <input type="submit" value="NINJA DEAD" onclick="ninjadead()">
+    <!-- <img id="NINJA"  src="/alien-ninja.jpg"> -->
+    <!-- <img name="NINJADEAD" onclick="ninja()" src="/alien-ninja-dead.jpg"> -->
     <script>
-    
+
+        var ninja = document.getElementById('NINJA').src="/alien-ninja.jpg";
+        var ninjadead = document.getElementById('NINJA').src="/alien-ninja-dead.jpg";
+        function change(){
+            if (onclick == "ninja()"){
+                var ninja;
+            }else{
+                var ninjadead;
+            }
+        };
 
     </script>
-    <!-- <script src="scriptbotones.js"></script> -->
-     
+    
+   
 </body>
 </html>
