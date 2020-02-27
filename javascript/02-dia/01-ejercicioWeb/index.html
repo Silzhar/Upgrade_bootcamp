@@ -7,22 +7,23 @@
 </head>
 <body>
     <p>25/02/2020</p>
-    <p class="buttons"></p>
-    <input type="submit" value="NINJA !" onclick="ninja()">
-    <input type="submit" value="NINJA DEAD" onclick="ninjadead()">
+    <p id="buttons"></p>
+    <button type="submit" onclick="ninja()">NINJA !</button>
+    <button type="submit" onclick="ninjadead()">NINJA DEAD</button>
     <!-- <img id="NINJA"  src="/alien-ninja.jpg"> -->
     <!-- <img name="NINJADEAD" onclick="ninja()" src="/alien-ninja-dead.jpg"> -->
     <script>
 
-        var ninja = document.getElementById('NINJA').src="/alien-ninja.jpg";
-        var ninjadead = document.getElementById('NINJA').src="/alien-ninja-dead.jpg";
-        function change(){
-            if (onclick == "ninja()"){
-                var ninja;
-            }else{
-                var ninjadead;
-            }
-        };
+        // var ninja = document.getElementById('buttons').src="/alien-ninja.jpg";
+        // var ninjadead = document.getElementById('buttons').src="/alien-ninja-dead.jpg";
+        function ninja(){
+            document.getElementById("buttons").innerHTML="<img src=alien-ninja.jpg>";
+    
+        }
+
+        function ninjadead(){
+            document.getElementById("buttons").innerHTML="<img src=alien-ninja-dead.jpg>";
+        }
 
     </script>
     
