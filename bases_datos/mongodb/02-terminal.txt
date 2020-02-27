@@ -1,0 +1,76 @@
+
+// Restablecler o volver a arrancar.
+1 - docker start mi_mongo
+
+// Par copiar un directorio.
+2 - docker cp SampleCollections mi_mongo:/tmp
+
+// Entrar en el bash .
+3 -docker exec -it mi_mongo bash
+
+// Cambiar de directorio a temp.
+4 - cd /tmp/
+
+5 -  ls  // aparece SampleCollections  mongodb-27017.sock
+
+//Entrar al directorio que lo contiene.
+6 -  cd SampleCollections/
+
+// Restablecler.
+7 -  mongorestore
+
+// Inicializar mongo
+8 -  mongo
+
+// Comprobar bases de datos existentes.
+9 - show databases
+
+// Acceder a la base de datos.
+10 - use SampleCollections;
+
+// Acceder a la tabla y visualizar.
+ 11 - db.Sakila_films.find().pretty();
+
+// Mostrar peliculas con longitud ( mostrar todo mismo parámetro).
+12 -  db.Sakila_films.find({"Length":"79"}).pretty();
+
+// Contar todo lo que tenga el mismo parametro.
+13 -  db.Sakila_films.find({"Length":"79"}).count();
+
+// Pasar 2 parametros a la query.
+14 - db.Sakila_films.find({"Length":"79", "Category":"Action"}).pretty();
+
+// Mostrar solo el ttulo con ciertos parametros.
+15 -  db.Sakila_films.find({"Length":"79", "Category":"Action"},{"Title":1}).pretty();
+
+// Lo mismo pero ocultando la ID (_id).
+16 - db.Sakila_films.find({"Length":"79", "Category":"Action"},{"Title":1,"_id":0}).pretty();
+
+// Buscar todo lo similar: entre / y / añadiendo "i"  (/lo que busco/i ).
+ db.Sakila_films.find({"Title":/lola/i, "Category":"Action"},{"Title":1,"_id":0}).pretty();
+
+ // Busqueda de un maximo de elementos : .limit(). Muestra los primeros.
+17 - db.Sakila_films.find({"Title":/wol/i},{"Title":1,"_id":0}).limit(2);
+
+ // Para buscar los ultimos.
+ 18 - db.Sakila_films.find({"Title":/wol/i},{"Title":1,"_id":0}).skip(2);
+
+ // Para actualizar un campo es necesario el modificador para no eliminar el resto de campos.
+    En este caso es $set . Si no existe el campo lo crea .
+     Solo afecta al primer elemento que encuentra.
+19 -  db.Sakila_films.update({"Category":"Action"},$set{"Category":"Acción"}})
+
+// Para afectar a todos : updateMany.
+20 - db.Sakila_films.updateMany({"Category":"Action"},$set{"Category":"Acción"}})
+
+ // $unset para borrar un campo. Borraría todas las "Category".
+21 - db.Sakila_films.update({"Category":"Action"},$unset{"Category":1}})
+
+// Para distinto de .
+22 - db.Sakila_films.distinct("Category");
+
+// Operadores relacionales :
+    $eq (=) -- $gt () -- $lt -- $ne (!=)-- $gte -- $lte   
+
+// Buscar todo lo de :  con $in : .
+24 - db.Sakila_films.find({"Category":{$in:["Action","Drama"]}}).count();
