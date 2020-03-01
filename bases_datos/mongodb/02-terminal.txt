@@ -74,3 +74,40 @@
 
 // Buscar todo lo de :  con $in : .
 24 - db.Sakila_films.find({"Category":{$in:["Action","Drama"]}}).count();
+
+// Acceder a un subcampo ( .actorId) .
+db.Sakila_films.find({"Actors.actorId":25}).count();
+
+// $rename para cambiar el nombre a un campo.
+
+// Hacer un insert.
+db.samples_pokemon.insert{
+	"id" : 22,
+	"num" : "022",
+	"name" : "Melmetal",
+	"img" : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/809.png",
+	"type" : [
+		"Normal"
+	],
+	"height" : "8.02 m",
+	"weight" : "8.000 kg",
+	"candy" : "Unknown",
+	"egg" : "Not in Eggs",
+	"spawn_chance" : 0.41,
+	"avg_spawns" : 41,
+	"spawn_time" : "01:56",
+	"multipliers" : null,
+	"weaknesses" : [
+		"Fighting", "Fire", "Ground"
+	],
+	"prev_evolution" : [
+		{
+			"num" : "021",
+			"name" : "Meltan"
+		}
+	]
+}
+
+
+// Buscar por id.
+db.samples_pokemon.find({"_id":ObjectId("58f56171ee9d4bd5e610d693")}).pretty();
