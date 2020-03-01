@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="referencia">Ejercicio 1 slides</p>
+    <button onclick="tratamiento()">funcion tratamiento</button>
+    <script>
+        var verdad = true;
+        function tratamiento(){
+            
+            if (verdad == true){
+                document.getElementById("referencia").innerHTML="tratamiento por boton";
+                verdad = false;
+            } else{
+                document.getElementById("referencia").innerHTML="Ejercicio 1 slides";
+                verdad = true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

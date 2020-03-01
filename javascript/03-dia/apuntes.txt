@@ -1,0 +1,33 @@
+   -- ESTRUCTURA --
+ // carpeta prinpipal.  
+    |__ index.html      ___ vid
+        |               |
+        |____ asets  _______ img
+        |               |
+        |               |___ aud
+        |
+        |
+        |___  css
+        |               __ bostrap
+        |              |
+        |_____ js _____|__ jquery
+                       |
+                       |___ (...otra)
+
+
+<button onclick="alert("Hola")">Hola</button>
+
+<button onclick="tratamiento()">Hola</button>
+
+        atributos :  style = "" acepta css en la etiqueta
+                    class = "" acepta las clases personalizadas del css
+
+-- Funciones auto-invocadas : han de crearse anónimas.
+
+ var mult = function(a, b){   // a y b son parametros
+     ....
+ }
+
+mult = ( 5, 5) // 5 y 5 son argumentos
+
+// Factorial  n = n * ( n - 1)
