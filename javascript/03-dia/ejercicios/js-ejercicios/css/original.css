@@ -1,0 +1,12 @@
+
+.original{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+
+.cambiada{
+    font-size: 25;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: brown;
+}

@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/js-ejercicios/css/original.css">
     <title>Document</title>
 </head>
 <body>
-    <p id="referencia" class="orginal">Ejercicio 1 slides</p>
+    <p id="referencia">Ejercicio 1 slides</p>
     <button onclick="tratamiento()" id="botonON">CLICK</button>
     <script>
         var verdad = true;
@@ -16,12 +15,10 @@
             if (verdad == true){
                 document.getElementById("referencia").innerHTML="tratamiento por boton";
                 document.getElementById("botonON").innerHTML="RETURN";
-                document.getElementById("referencia").className="cambiada";
                 verdad = false;
-            } else {
+            } else{
                 document.getElementById("referencia").innerHTML="Ejercicio 1 slides";
                 document.getElementById("botonON").innerHTML="CLICK";
-                document.getElementById("referencia").className="original";
                 verdad = true;
             }
         }
