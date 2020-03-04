@@ -24,13 +24,13 @@
         <input id="circulo">
 
         <script>
+            var minimoArea = 2000000;
 
             function cuadrado(){
-                var minimoAreaCuadrado = 20;
                 var lado = document.getElementById("lado").value;
                 var areaCuadrado = lado * lado;
 
-                if(areaCuadrado >= minimoAreaCuadrado ){
+                if(areaCuadrado <= minimoArea ){
                     document.getElementById("cuadrado").value = areaCuadrado + "  M*2 . Es posible construir";
                 }else{
                     document.getElementById("cuadrado").value = areaCuadrado + " M*2 . No es posible construir";
@@ -39,16 +39,17 @@
             
 
             function circulo(){
-                var minimoAreaCirculo = 20;
                 var radio = document.getElementById("radio").value;
                 var areaCirculo = radio * 3.14;
-                
-                if (areaCirculo >= minimoAreaCirculo){
+
+                if (areaCirculo <= minimoArea){
                     document.getElementById("circulo").value = areaCirculo + "  M*2 . Es posible construir";
                 }else {
                     document.getElementById("circulo").value = areaCirculo + "  M*2 . No es posible construir";
                 }
             }
+
+            
         </script>
 
 </body>
