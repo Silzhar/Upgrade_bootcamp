@@ -1,0 +1,8 @@
+var coches = ["renault", "ford"]
+
+console.log("prueba de array", coches instaceof Array)
+
+// Devuelve true .
+ 
+// Acceder al ultimo elemento.
+console.log("ultimo coche", coches[coches.length -1])

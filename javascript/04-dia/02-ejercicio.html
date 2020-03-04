@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var personas = [
+            { nombre : "Iván", edad: 22, ciudad : "Madrid"},
+            { nombre: "María", edad: 20, ciudad : "Madrid"},
+            { nombre: "Pedro", edad: 30, ciudad : "Bruselas"},
+            { nombre: "Asier", edad: 38, ciudad : "Bilbao"},
+            { nombre: "Paco", edad: 35, ciudad : "Pamplona"},
+        ];
+
+        personas.sort(function(persona1,persona2) {
+            return persona1.edad - persona2.edad;
+        });
+
+        console.log('Por orden de edad :',personas);
+
+
+        personas.sort(function(persona1, persona2) {
+            if( persona1.ciudad > persona2.ciudad){
+                return 1;
+            }
+            if (persona1.ciudad < persona2.ciudad){
+                return - 1;
+            };
+            return 0 ;
+        });
+
+        console.log("Por orden de ciudad :", personas);
+    </script>
+</body>
+</html>
+
