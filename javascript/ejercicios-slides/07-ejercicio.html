@@ -11,14 +11,25 @@
     <h3>Ejercicio 7 slides</h3>
     <h3>Formulario</h3>
     <div>
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apellido">
-        <input type="button" value="Enviar">
+        <p>Nombre :</p>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <p>Apellido :</p>
+        <input type="text" id="apellido" placeholder="Apellido">
+        <p></p>
+        <input type="button" onclick="formulario()" value="Enviar">
+        <p></p>
+        <input id="salida">
     </div>
 
     <script>
+
+        function formulario(){
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+
+            document.getElementById("salida").value = nombre + " "+ apellido;
+        }
         
- 
     </script>
     
 </body>
