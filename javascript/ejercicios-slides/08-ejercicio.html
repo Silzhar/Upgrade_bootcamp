@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-        <h2>04/03/2020</h2>
-        <h3>Ejercicio 8 slides</h3>
-        <h3>Hospital</h3>
+    <h2>04/03/2020</h2>
+    <h3>Ejercicio 8 slides</h3>
+    <h3>Hospital</h3>
 
         <p>Calcule el área si dispone de un cuadrado ingresando el lado :</p>
         <input type="number" id="lado" placeholder=" Metros disponibles">
@@ -22,6 +22,10 @@
         <input type="button" onclick="circulo()" value="Calcular">
         <p></p>
         <input id="circulo">
+
+        <p></p>
+        <input type="button" onclick="limpiar()" value="Limpiar datos">
+
 
         <script>
             var minimoArea = 2000000;
@@ -49,6 +53,12 @@
                 }
             }
 
+            function limpiar(){
+                document.getElementById("lado").value = " ";
+                document.getElementById("cuadrado").value = " ";
+                document.getElementById("radio").value = " ";
+                document.getElementById("circulo").value = " ";
+            }
             
         </script>
 
