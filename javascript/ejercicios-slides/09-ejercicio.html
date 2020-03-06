@@ -14,36 +14,36 @@
         <h3>Calculadora</h3>
     </div>
     <div class="calculadora">
-        <form action="calculadora.js"></form>
-            <p>Resultado <input type="text" name="resultado" size="20" readonly></p>
-            <div class = "fila-uno">
-                <input type="button" onclick="siete()" value = "7">
-                <input type="button" onclick="ocho()" value = "8">
-                <input type="button" onclick="nueve()" value = "9">
-                <input type="button" onclick="dividir()" value = "/">
-            </div>
-            <div class = "fila-dos">
-                <input type="button" onclick="cuatro()" value = "4">
-                <input type="button" onclick="cinco()" value = "5">
-                <input type="button" onclick="seis()" value = "6">
-                <input type="button" onclick="multiplicar()" value = "*">
-            </div>
-            <div class = "fila-tres">
-                    <input type="button" onclick="uno()" value = "1">
-                    <input type="button" onclick="dos()" value = "2">
-                    <input type="button" onclick="tres()" value = "3">
-                    <input type="button" onclick="restar()" value ="-">
+        <form action="calculadora.js" style = "border: 4px solid blue; padding: 20px;">
+            <p>Resultado <textarea id="resultado" rows="1" class="textArea" readonly></textarea> </p>
+                <div class = "fila-uno">
+                    <input type="button" onclick="siete()" value = "7">
+                    <input type="button" onclick="ocho()" value = "8">
+                    <input type="button" onclick="nueve()" value = "9">
+                    <input type="button" onclick="dividir()" value = "/">
                 </div>
-            <div class = "fila-cuatro">
-                <input type="button" onclick="cero()" value = "0">
-                <input type="button" onclick="limpiar()" value = "c">
-                <input type="button" onclick="igual()" value = "=">
-                <input type="button" onclick="sumar()" value ="+">
-            </div>
-        </div>
+                <div class = "fila-dos">
+                    <input type="button" onclick="cuatro()" value = "4">
+                    <input type="button" onclick="cinco()" value = "5">
+                    <input type="button" onclick="seis()" value = "6">
+                    <input type="button" onclick="multiplicar()" value = "*">
+                </div>
+                <div class = "fila-tres">
+                        <input type="button" onclick="uno()" value = "1">
+                        <input type="button" onclick="dos()" value = "2">
+                        <input type="button" onclick="tres()" value = "3">
+                        <input type="button" onclick="restar()" value ="-">
+                    </div>
+                <div class = "fila-cuatro">
+                    <input type="button" onclick="cero()" value = "0">
+                    <input type="button" onclick="limpiar()" value = "c">
+                    <input type="button" onclick="igual()" value = "=">
+                    <input type="button" onclick="sumar()" value ="+">
+                </div>
+        </form>
+    </div>
 
-
-
+<script src="/js/calculadora.js"></script>
 
 </body>
 </html>
