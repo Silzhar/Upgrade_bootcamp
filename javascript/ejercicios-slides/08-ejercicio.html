@@ -15,13 +15,13 @@
         <input type="number" id="lado" placeholder=" Metros disponibles">
         <input type="button" onclick="cuadrado()" value="Calcular">
         <p></p>
-        <input id="cuadrado">
+        <p id="cuadrado">0 metros cuadrados</p>
 
         <p>Calcule el área si dispone de un circulo ingresando el radio :</p>
         <input type="number" id="radio" placeholder=" Metros disponibles">
         <input type="button" onclick="circulo()" value="Calcular">
         <p></p>
-        <input id="circulo">
+        <p id="circulo">0 metros cuadrados</p>
 
         <p></p>
         <input type="button" onclick="limpiar()" value="Limpiar datos">
@@ -31,33 +31,33 @@
             var minimoArea = 2000000;
 
             function cuadrado(){
-                var lado = document.getElementById("lado").value;
+                var lado = parseFloat(document.getElementById("lado").value);
                 var areaCuadrado = lado * lado;
 
-                if(areaCuadrado <= minimoArea ){
-                    document.getElementById("cuadrado").value = areaCuadrado + "  M*2 . Es posible construir";
+                if(areaCuadrado >= minimoArea ){
+                    document.getElementById("cuadrado").innerHTML = areaCuadrado.toFixed(2) + "  M*2 . Es posible construir";
                 }else{
-                    document.getElementById("cuadrado").value = areaCuadrado + " M*2 . No es posible construir";
+                    document.getElementById("cuadrado").innerHTML = areaCuadrado.toFixed(2) + " M*2 . No es posible construir";
                 }
             }
             
 
             function circulo(){
-                var radio = document.getElementById("radio").value;
-                var areaCirculo = radio * 3.14;
-
-                if (areaCirculo <= minimoArea){
-                    document.getElementById("circulo").value = areaCirculo + "  M*2 . Es posible construir";
+                var radio = parseFloat(document.getElementById("radio").value);
+                var areaCirculo = radio * Math.PI;
+                console.log(areaCirculo, radio);
+                if (areaCirculo >= minimoArea){
+                    document.getElementById("circulo").innerHTML = areaCirculo.toFixed(2) + "  M*2 . Es posible construir";
                 }else {
-                    document.getElementById("circulo").value = areaCirculo + "  M*2 . No es posible construir";
+                    document.getElementById("circulo").innerHTML = areaCirculo.toFixed(2) + "  M*2 . No es posible construir";
                 }
             }
 
             function limpiar(){
                 document.getElementById("lado").value = " ";
-                document.getElementById("cuadrado").value = " ";
+                document.getElementById("cuadrado").innerHTML = "0 metros cuadrados ";
                 document.getElementById("radio").value = " ";
-                document.getElementById("circulo").value = " ";
+                document.getElementById("circulo").innerHTML = "0 metros cuadrados ";
             }
             
         </script>
