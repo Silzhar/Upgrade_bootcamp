@@ -1,0 +1,43 @@
+
+// arrancar .
+silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb$ docker start mi_mongo
+mi_mongo
+
+silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb$ docker exec -it mi_mongo mongo
+MongoDB shell version v4.2.3
+
+
+// Si al hacer un update el primer campo se deja vacio se cambia en toda la base de datos.
+	Si se quiere cambiar "name" a "nombre"  traduciría todos.
+
+        // Clonar e incluir en mongo nueva base de datos.
+
+        silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb$ git clone https://github.com/ozlerhakan/mongodb-json-files.git
+        Clonando en 'mongodb-json-files'...
+        remote: Enumerating objects: 19, done.
+        remote: Counting objects: 100% (19/19), done.
+        remote: Compressing objects: 100% (13/13), done.
+        remote: Total 114 (delta 7), reused 15 (delta 5), pack-reused 95
+        Recibiendo objetos: 100% (114/114), 40.49 MiB | 4.40 MiB/s, listo.
+        Resolviendo deltas: 100% (32/32), listo.
+
+        silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb$ cd mongodb-json-files/
+        silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb/mongodb-json-files$ ll
+        total 32
+        drwxr-xr-x 4 silzhar silzhar 4096 mar  7 12:00 ./
+        drwxr-xr-x 4 silzhar silzhar 4096 mar  7 12:00 ../
+        drwxr-xr-x 2 silzhar silzhar 4096 mar  7 12:00 datasets/
+        drwxr-xr-x 8 silzhar silzhar 4096 mar  7 12:00 .git/
+        -rw-r--r-- 1 silzhar silzhar    6 mar  7 12:00 .gitignore
+        -rwxr-xr-x 1 silzhar silzhar 4923 mar  7 12:00 import.sh*
+        -rw-r--r-- 1 silzhar silzhar 3258 mar  7 12:00 README.adoc
+        silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb/mongodb-json-files$ docker cp datasets mi_mongo:/tmp
+        silzhar@picuet:~/Documentos/upgrade_hub/upgrade_bootcamp/bases_datos/mongodb/mongodb-json-files$ docker exec -it mi_mongo bash
+        root@08cac6a077ec:/# cd /tmp/
+        root@08cac6a077ec:/tmp# ls
+        SampleCollections  datasets  mongodb-27017.sock
+        root@08cac6a077ec:/tmp# cd datasets/
+        root@08cac6a077ec:/tmp/datasets# mongoimport -d paises -c paises countries-small.json
+        2020-03-07T11:08:38.669+0000	connected to: mongodb://localhost/
+        2020-03-07T11:08:38.753+0000	248 document(s) imported successfully. 0 document(s) failed to import.
+        root@08cac6a077ec:/tmp/datasets# 
