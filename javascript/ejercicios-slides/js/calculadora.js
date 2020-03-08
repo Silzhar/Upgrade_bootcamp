@@ -2,7 +2,7 @@
 var textArea = document.getElementById("resultado").value
 
 function cero(){
-    if(textArea == ""){
+    if(textArea === ""){
         document.getElementById("resultado").innerHTML = "0";
         console.log('if',textArea);
     }else{
