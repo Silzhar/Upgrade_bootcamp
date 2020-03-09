@@ -15,30 +15,32 @@
     </div>
     <div class="calculadora">
         <form action="calculadora.js" style = "border: 4px solid blue; padding: 20px;">
-            <p>Resultado <textarea id="resultado" rows="1" class="textArea" readonly></textarea> </p>
+            <p>Resultado 
+                <textarea id="resultado" rows="1" class="textArea" value="0" readonly></textarea>
+            </p>
                 <div class = "fila-uno">
-                    <input type="button" onclick="siete()" value = "7">
-                    <input type="button" onclick="ocho()" value = "8">
-                    <input type="button" onclick="nueve()" value = "9">
-                    <input type="button" onclick="dividir()" value = "/">
+                    <button type="button" onclick="numero(7)">7</button>
+                    <button type="button" onclick="numero(8)">8</button>
+                    <button type="button" onclick="numero(9)">9</button>
+                    <button type="button" onclick="dividir()">/</button>
                 </div>
                 <div class = "fila-dos">
-                    <input type="button" onclick="cuatro()" value = "4">
-                    <input type="button" onclick="cinco()" value = "5">
-                    <input type="button" onclick="seis()" value = "6">
-                    <input type="button" onclick="multiplicar()" value = "*">
+                    <button type="button" onclick="numero(4)">4</button>
+                    <button type="button" onclick="numero(5)">5</button>
+                    <button type="button" onclick="numero(6)">6</button>
+                    <button type="button" onclick="multiplicar()">*</button>
                 </div>
                 <div class = "fila-tres">
-                        <input type="button" onclick="uno()" value = "1">
-                        <input type="button" onclick="dos()" value = "2">
-                        <input type="button" onclick="tres()" value = "3">
-                        <input type="button" onclick="restar()" value ="-">
+                        <button type="button" onclick="numero(1)">1</button>
+                        <button type="button" onclick="numero(2)">2</button>
+                        <button type="button" onclick="numero(3)">3</button>
+                        <button type="button" onclick="restar()">--</button>
                     </div>
                 <div class = "fila-cuatro">
-                    <input type="button" onclick="cero()" value = "0">
-                    <input type="button" onclick="limpiar()" value = "c">
-                    <input type="button" onclick="igual()" value = "=">
-                    <input type="button" onclick="sumar()" value ="+">
+                    <button type="button" onclick="numero(0)">0</button>
+                    <button type="button" onclick="limpiar()">C</button>
+                    <button type="button" onclick="igual()">=</button>
+                    <button type="button" onclick="sumar()">+</button>
                 </div>
         </form>
     </div>
