@@ -26,7 +26,7 @@
 9 - show databases
 
 // Acceder a la base de datos.
-10 - use SampleCollections;
+10 - use SampleCollections;  Y  show tables;
 
 // Acceder a la tabla y visualizar.
  11 - db.Sakila_films.find().pretty();
@@ -111,3 +111,4 @@ db.samples_pokemon.insert{
 
 // Buscar por id.
 db.samples_pokemon.find({"_id":ObjectId("58f56171ee9d4bd5e610d693")}).pretty();
+
