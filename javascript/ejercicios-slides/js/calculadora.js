@@ -6,7 +6,6 @@ var totalSuma = 0;
 function numero(entrada){
     if(textArea === 0 ){
         document.getElementById("resultado").value = entrada ;
-        
         console.log('if',textArea);
     }else{
         salida =  document.getElementById("resultado").value += entrada;
@@ -37,7 +36,7 @@ function multiplicar(textArea){
     if(variables.length == 2){
         var total = variables[0] * variables[1];
         document.getElementById("resultado").value = total;
-        console.log('division ',total);
+        console.log('multiplicar ',total);
         variables.length = 0;   
     }
 }
