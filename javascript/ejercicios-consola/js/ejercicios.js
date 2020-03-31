@@ -161,3 +161,62 @@ function ejercicio06(){
 
 ejercicio06();
 console.log('//----------------------/////----------------------//')
+
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
+// Ejercicio 7
+function ejercicio07(){
+    function areaTrapecio(baseMayor, baseInferior, alturaTrap){
+        var areaTrap =((baseMayor + baseInferior) * alturaTrap) / 2;
+        return areaTrap
+    }
+
+    function perimetroTrapecio(baseMayor, baseInferior, ladoA, ladoB){
+        var perimetroTrap = baseMayor + baseInferior + ladoA + ladoB;
+        return perimetroTrap
+    }
+
+    var baseMayor = 38;
+    var baseInferior = 26;
+    var alturaTrap = 20;
+    var ladoA = 24;
+    var ladoB = 24;
+
+    var area7 = areaTrapecio(baseMayor, baseInferior, alturaTrap);
+    console.log('Area del trapecio : ',area7);
+
+    var perimetro7 = perimetroTrapecio(baseMayor, baseInferior, ladoA, ladoB);
+    console.log('Perimetro del trapecio : ',perimetro7);
+}
+
+ejercicio07();
+console.log('//----------------------/////----------------------//')
+
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
+// Ejercicio 8
+function ejercicio08(){
+    function perimetroPoligonoRegular(lados, basePR){
+        var perimetroPR = lados * basePR;
+        return perimetroPR
+    }
+
+    function areaPoligonoRegular(perimetroPR, apotema){
+        var areaPR = (perimetroPR * apotema) / 2;
+        return areaPR
+    }
+
+    var lados = 6;
+    var basePR = 19;
+    var apotema = 11;
+
+    var perimetro8 = perimetroPoligonoRegular(lados, basePR);
+    console.log('Perimetro del poligono regular : ',perimetro8);
+
+    var area8 = areaPoligonoRegular(perimetro8, apotema);
+    console.log('Area del poligono regular : ',area8);
+}
+
+ejercicio08();
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
