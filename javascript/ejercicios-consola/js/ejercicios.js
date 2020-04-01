@@ -218,5 +218,64 @@ function ejercicio08(){
 }
 
 ejercicio08();
+console.log('//----------------------/////----------------------//')
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
+// Ejercicio 9
+function ejercicio09(){
+    function areaCirculo(radio){
+        var areaCir = Math.PI * (radio * radio);
+        return areaCir
+    }
+
+    function perimetroCirculo(radio){
+        var perimetroCir = 2 * Math.PI * radio;
+        return perimetroCir
+    }
+
+    var radio = 38;
+    var area9 = areaCirculo(radio);
+    console.log('Area del circulo : ',area9.toFixed(2));
+
+    var perimetro9 = perimetroCirculo(radio);
+    console.log('Perimetro del circulo : ',perimetro9.toFixed(2));
+}
+
+ejercicio09();
+console.log('//----------------------/////----------------------//')
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
+// Ejercicio 10   Math.pow() para elevar un número a la potencia deseada.
+function ejercicio10(){
+    function corona(radioExterior, radioInterior){
+        var areaCorona = Math.PI * (Math.pow(radioExterior, 2) - Math.pow(radioInterior, 2));
+        return areaCorona
+    }
+
+    var radioExterior = 35;
+    var radioInterior = 28;
+    var area10 = corona(radioExterior, radioInterior);
+    console.log('Area de la corona : ',area10.toFixed(2));
+}
+
+ejercicio10();
+console.log('//----------------------/////----------------------//')
+//------------------------------/////////------------------------------//
+//------------------------------/////////------------------------------//
+// Ejercicio 11
+function ejercicio11(){
+    function porcionArea(radio, grados){
+        var porcion = (Math.PI * Math.pow(radio, 2) * grados) / 360;
+        return porcion
+    }
+
+    var radio = 40;
+    var grados = 34;
+    var area11 = porcionArea(radio, grados);
+    console.log('Porcion del area con los grados proporcionados : ',area11.toFixed(2));
+}
+
+ejercicio11();
+console.log('//----------------------/////----------------------//')
 //------------------------------/////////------------------------------//
 //------------------------------/////////------------------------------//
