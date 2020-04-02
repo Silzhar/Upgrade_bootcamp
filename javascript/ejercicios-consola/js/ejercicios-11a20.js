@@ -117,3 +117,131 @@ function ejercicio15(){
 ejercicio15();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 16
+function ejercicio16(){
+    function areaCasco(radioEs, alturaCasco){
+        var areaCa = Math.pow(Math.PI, 2) * radioEs * alturaCasco;
+        return areaCa
+    }
+
+    function volumenCasco(radioEs, alturaCasco){
+        var volumenCa = (Math.PI * Math.pow(alturaCasco, 2) *
+            (Math.pow(radioEs, 3) - alturaCasco)) / 3;
+        return volumenCa
+    }
+
+    var radioEs = 32;
+    var alturaCasco = 15;
+
+    var area16 = areaCasco(radioEs, alturaCasco);
+    console.log('Area del casco : ',area16.toFixed(2));
+
+    var volumen16 = volumenCasco(radioEs, alturaCasco);
+    console.log('Volumen del casco : ',volumen16.toFixed(2));
+}
+
+ejercicio16();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 17
+function ejercicio17(){
+    function areaHuso(radioTotal, gradosHuso){
+        var areaH = (4 * Math.PI *Math.pow(radioTotal, 2) * gradosHuso) / 360;
+        return areaH
+    }
+
+    function volumenHuso(radioTotal, gradosHuso){
+        var volumenH = (4 * Math.PI *Math.pow(radioTotal, 3) * gradosHuso) / ( 3 * 360);
+        return volumenH
+    }
+
+    var radioTotal = 18;
+    var gradosHuso = 8;
+
+    var area17 = areaHuso(radioTotal, gradosHuso);
+    console.log('Area del huso : ',area17.toFixed(2));
+
+    var volumen17 = volumenHuso(radioTotal, gradosHuso);
+    console.log('Volumen del huso : ',volumen17.toFixed(2));
+}
+
+ejercicio17();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 18
+function ejercicio18(){
+    function areaSegmento(radioEsfera, alturaSegmento){
+        var areaS = Math.pow(Math.PI, 2) * radioEsfera * alturaSegmento;
+        return areaS
+    }
+
+    function volumenSegmento(alturaSegmento, radioSegInferior, radioSegSuperior){
+        var volumenS = Math.PI * alturaSegmento * 
+            (Math.pow(alturaSegmento, 2) + 3*(Math.pow(radioSegInferior, 2)) + 3*(Math.pow(radioSegSuperior, 2))) / 6;
+        return volumenS
+    }
+
+    var radioEsfera = 10;
+    var alturaSegmento = 2;
+    var radioSegInferior = 4;
+    var radioSegSuperior = 2;
+
+    var area18 = areaSegmento(radioEsfera, alturaSegmento);
+    console.log('Area del segmento : ',area18.toFixed(2));
+
+    var volumen18 = volumenSegmento(alturaSegmento, radioSegInferior, radioSegSuperior);
+    console.log('Volumen del segmento',volumen18.toFixed(2));
+}
+
+ejercicio18();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 19 
+function ejercicio19(){
+    function areaCubo(alturaLado){
+        var areaC = 6 * Math.pow(alturaLado, 2);
+        return areaC
+    }
+
+    function volumenCubo(alturaLado){
+        var volumenC = Math.pow(alturaLado, 3);
+        return volumenC
+    }
+
+    var alturaLado = 3;
+    var area19 = areaCubo(alturaLado);
+    console.log('Area del cubo : ',area19);
+
+    var volumen19 = volumenCubo(alturaLado);
+    console.log('Volumen del cubo : ',volumen19);
+}
+
+ejercicio19();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 20
+function ejercicio20(){
+    function areaOrtoedro(largo, ancho, alto){
+        var areaO = 2 * ((largo * ancho) + (largo * alto) + (ancho * alto));
+        return areaO
+    }
+
+    function volumenortoedro(largo, ancho, alto){
+        var volumenO = largo * ancho * alto;
+        return volumenO
+    }
+
+    var largo = 12;
+    var ancho = 8;
+    var alto = 10;
+
+    var area20 = areaOrtoedro(largo, ancho, alto);
+    console.log('Area del ortoedro : ',area20);
+
+    var volumen20 = volumenortoedro(largo, ancho, alto);
+    console.log('Volumen del ortoedro  : ',volumen20);
+}
+
+ejercicio20();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
