@@ -127,3 +127,42 @@ function ejercicio25(){
 ejercicio25();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 26
+function ejercicio26(){
+    function multiplos3(tres){
+        while (totalUno < maximo){
+            arrayAlmacen3.push(totalUno);
+            totalUno += tres;
+            }
+            console.log('3',arrayAlmacen3); 
+            return arrayAlmacen3
+        }
+
+    function multiplos5(cinco){
+        while (totalDos < maximo){
+            arrayAlmacen5.push(totalDos);
+            totalDos += cinco;
+            }
+            console.log('5',arrayAlmacen5); 
+            return arrayAlmacen5
+        }
+    var maximo = 1000; 
+    var tres = 3;
+    var cinco = 5;
+    var arrayAlmacen3 = [];
+    var arrayAlmacen5 = [];
+    var totalUno = 0;
+    var totalDos = 0;
+
+    var multiplosTres = multiplos3(tres);
+    var multiplosCinco = multiplos5(cinco);
+
+    var sumaMulTres = multiplosTres.reduce((primerNumero, segundoNumero) => primerNumero + segundoNumero);
+    var sumaMulCinco = multiplosCinco.reduce((primerNumero, segundoNumero) => primerNumero + segundoNumero);
+    var sumaTotal = sumaMulTres + sumaMulCinco;
+    console.log('Suma total de multiplos : ',sumaTotal);
+}
+
+ejercicio26();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
