@@ -190,11 +190,40 @@ function ejercicio27(){
     var parametro = 2;
     var arrayFibonacci = [0,0];
 
-    contFib = paresFibonacci(parametro);
+    var contFib = paresFibonacci(parametro);
     console.log('Contador total pares de Fibonacci : ',contFib);
 }
 
 ejercicio27();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 28
+function ejercicio28(){
+    function factoriales(){
+        while(contadorN < totalN){
+            comprobarN.push(contadorN);
+            
+            multiplosSiete = comprobarN.forEach(function(consulta){
+                if(consulta % 7 == 0 ){
+                    comprobarN.push(consulta);
+                    // console.log('consulta :',consulta);
+                }
+            });
+            // console.log(multiplosSiete);
+        contadorN++;
+        
+        }
+    }
 
+    var contadorN = 0;
+    var totalN = 21;
+    var comprobarN = [];
+    var multiplosSiete = [];
+    factoriales();
+    console.log('total :',comprobarN);
+    console.log(multiplosSiete);
+}
+
+ejercicio28();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
