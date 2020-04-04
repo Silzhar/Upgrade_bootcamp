@@ -166,3 +166,35 @@ function ejercicio26(){
 ejercicio26();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 27
+function ejercicio27(){
+    function paresFibonacci(parametro){
+        while (contador < tope){
+            if (parametro % 2 == 0){
+                var lastfib = arrayFibonacci[arrayFibonacci.length - 1];
+                var antLastfib = arrayFibonacci[arrayFibonacci.length - 2];
+                parametro = parametro + lastfib + antLastfib;
+                arrayFibonacci.push(parametro);
+                // var exponente = parametro + 2;
+                contador++;
+                
+            
+            }
+        }
+        console.log('parametro ;',arrayFibonacci);
+        return parametro
+    }
+
+    var contador = 0;
+    var tope = 10;
+    var parametro = 2;
+    var arrayFibonacci = [0,0];
+
+    contFib = paresFibonacci(parametro);
+    console.log('Contador total pares de Fibonacci : ',contFib);
+}
+
+ejercicio27();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+
