@@ -201,7 +201,6 @@ console.log('//----------------------/////----------------------//')
 function ejercicio28(){
     function factoriales(){
         while(contadorN < totalN){
-
             exponentes.push(contadorN * 7);
             // Cambiar pirmera posicion del array a 1 para que en la 
             // multiplicación el resultado no sea 0 .
@@ -226,5 +225,40 @@ function ejercicio28(){
 }
 
 ejercicio28();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 29
+function ejercicio29(){
+    function calculo(){
+        while(iniciador < max_n){
+            if(iniciador % 2 == 0 ){
+                add_array = pares.push(iniciador);     
+            };
+            iniciador++;
+        }
+        return add_array;
+    }
+
+    function calculoDiv(pares){
+        var suma_pares = pares.reduce((num_1, num_2) => num_1 + num_2);
+        if(suma_pares % 44 == 0){
+            console.log('La suma de los pares es divisible por 44');
+        }else{
+            console.log('No es divisible por 44');
+        }
+    }
+
+    var iniciador = 0;
+    var max_n = 10000;
+    var add_array = 0;
+    var pares = [];
+
+    calculo();
+    console.log('total :',pares);
+    calculoDiv(pares);
+
+}
+
+ejercicio29();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
