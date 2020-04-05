@@ -203,7 +203,7 @@ function ejercicio28(){
         while(contadorN < totalN){
 
             exponentes.push(contadorN * 7);
-            // Cambiar pirmera posicion del arrau a 1 para que en la 
+            // Cambiar pirmera posicion del array a 1 para que en la 
             // multiplicación el resultado no sea 0 .
             exponentes.splice(0, 1, 1);
             var totalCN = exponentes.reduce((n_1, n_2) => n_1 + n_2);
