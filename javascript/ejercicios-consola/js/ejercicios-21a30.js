@@ -262,3 +262,38 @@ function ejercicio29(){
 ejercicio29();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+function ejercicio30(){
+    function divisibles_tres(){
+        while(param_cero < max_num){
+            if(param_cero % 3 == 0){
+                list_div.push(param_cero);
+            };
+            param_cero++;
+        }
+        return
+    }
+
+    function div_totales(list_div){
+            // Cambiar primera posicion del array a 1 para que en la 
+            // multiplicación el resultado no sea 0 .
+            list_div.splice(0, 1, 1);
+        var producto_total = list_div.reduce((primer_n, segundo_n) => primer_n * segundo_n);
+        if (producto_total % 7 == 0 ){
+            console.log('El producto es divisible por 7');
+        }else{
+            console.log('No e posible dividir por 7 el producto de los numeros divisibles por 3');
+        }
+    }
+
+    var param_cero = 0;
+    var max_num = 1000;
+    var list_div = [];
+    
+    divisibles_tres();
+    div_totales(list_div);
+    console.log('lista ',list_div);
+}
+
+ejercicio30();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
