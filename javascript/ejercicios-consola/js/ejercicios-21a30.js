@@ -201,27 +201,28 @@ console.log('//----------------------/////----------------------//')
 function ejercicio28(){
     function factoriales(){
         while(contadorN < totalN){
-            comprobarN.push(contadorN);
-            
-            multiplosSiete = comprobarN.forEach(function(consulta){
-                if(consulta % 7 == 0 ){
-                    comprobarN.push(consulta);
-                    // console.log('consulta :',consulta);
-                }
-            });
-            // console.log(multiplosSiete);
-        contadorN++;
-        
+
+            exponentes.push(contadorN * 7);
+            // Cambiar pirmera posicion del arrau a 1 para que en la 
+            // multiplicación el resultado no sea 0 .
+            exponentes.splice(0, 1, 1);
+            var totalCN = exponentes.reduce((n_1, n_2) => n_1 + n_2);
+            total_exponentes.push(totalCN);
+            contadorN++; 
         }
     }
 
     var contadorN = 0;
-    var totalN = 21;
-    var comprobarN = [];
-    var multiplosSiete = [];
+    //  994 / 7 = 142. Ultimo multiplo de 7 antes del tope propuesto (1000).
+    var totalN = 143;
+    var exponentes = [];
+    var total_exponentes = [];
+    
     factoriales();
-    console.log('total :',comprobarN);
-    console.log(multiplosSiete);
+    console.log('Exponentes a multiplicar  ',exponentes);
+
+    var sumaMultiplos = total_exponentes.reduce((n_1, n_2) => n_1 + n_2);
+    console.log('Total suma de múltiplos de 7 hasta mil :',sumaMultiplos);
 }
 
 ejercicio28();
