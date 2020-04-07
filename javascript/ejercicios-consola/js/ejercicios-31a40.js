@@ -46,44 +46,59 @@ console.log('//----------------------/////----------------------//')
 // Ejercicio
 function ejercicio33(){
     function factoresN(){
-
         if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0) && (n_tester % 7 === 0)){
+            factores_n.push(1);
             factores_n.push(2);
             factores_n.push(3);
             factores_n.push(5);
-            factores_n.push(7);     
+            factores_n.push(7);    
+            factores_n.push(n_tester);    
         }
 
         else if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0)){
+            factores_n.push(1);
             factores_n.push(2);
             factores_n.push(3);
             factores_n.push(5);
+            factores_n.push(n_tester);    
         }
 
         else if((n_tester % 2 == 0) && (n_tester % 5 == 0)){
+            factores_n.push(1);
             factores_n.push(2);
             factores_n.push(5);
+            factores_n.push(n_tester);    
         }
 
         else if((n_tester % 2 == 0) && (n_tester % 3 == 0)){
+            factores_n.push(1);
             factores_n.push(2);
             factores_n.push(3);
+            factores_n.push(n_tester);    
         }
 
         else if(n_tester % 7 == 0){
-            factores_n.push(7);
+            factores_n.push(1);
+            factores_n.push(7)
+            factores_n.push(n_tester);
         }
 
         else if(n_tester % 5 == 0){
+            factores_n.push(1);
             factores_n.push(5);
+            factores_n.push(n_tester);
         }
 
         else if(n_tester % 3 == 0){
+            factores_n.push(1);
             factores_n.push(3);
+            factores_n.push(n_tester);
         }
 
         else if(n_tester % 2 == 0){
+            factores_n.push(1);
             factores_n.push(2);
+            factores_n.push(n_tester);
         }
 
         else{
