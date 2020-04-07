@@ -43,3 +43,66 @@ function ejercicio32(){
 ejercicio32();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio
+function ejercicio33(){
+    function factoresN(){
+
+        if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0) && (n_tester % 7 === 0)){
+            factores_n.push(2);
+            factores_n.push(3);
+            factores_n.push(5);
+            factores_n.push(7);     
+        }
+
+        else if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0)){
+            factores_n.push(2);
+            factores_n.push(3);
+            factores_n.push(5);
+        }
+
+        else if((n_tester % 2 == 0) && (n_tester % 5 == 0)){
+            factores_n.push(2);
+            factores_n.push(5);
+        }
+
+        else if((n_tester % 2 == 0) && (n_tester % 3 == 0)){
+            factores_n.push(2);
+            factores_n.push(3);
+        }
+
+        else if(n_tester % 7 == 0){
+            factores_n.push(7);
+        }
+
+        else if(n_tester % 5 == 0){
+            factores_n.push(5);
+        }
+
+        else if(n_tester % 3 == 0){
+            factores_n.push(3);
+        }
+
+        else if(n_tester % 2 == 0){
+            factores_n.push(2);
+        }
+
+        else{
+            console.log('No es divisible');
+        }
+        
+    }
+    
+    var n_tester = 210;
+    var factores_n = [];
+    
+
+    factoresN();
+
+    // Set : si entra en varios elimina valores repetidos .
+    // var clear_factores_n = new Set(factores_n);
+    console.log('Numeros por los que se puede dividir :',factores_n);
+}
+
+ejercicio33();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
