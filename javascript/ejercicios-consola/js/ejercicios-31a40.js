@@ -1,4 +1,4 @@
-function ejercicio40(){
+function ejercicio31(){
     function n_primos(){  
         for (controller of list_primos){
             if(controller < control_max){
@@ -16,6 +16,6 @@ function ejercicio40(){
     n_primos();
 }
 
-ejercicio40();
+ejercicio31();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
