@@ -55,6 +55,14 @@ function ejercicio33(){
             factores_n.push(n_tester);    
         }
 
+        else if((n_tester % 2 == 0) && (n_tester % 5 == 0) && (n_tester % 7 == 0)){
+            factores_n.push(1);
+            factores_n.push(2);
+            factores_n.push(5);
+            factores_n.push(7);
+            factores_n.push(n_tester);    
+        }
+
         else if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0)){
             factores_n.push(1);
             factores_n.push(2);
@@ -107,7 +115,7 @@ function ejercicio33(){
         
     }
     
-    var n_tester = 210;
+    var n_tester = 70;
     var factores_n = [];
     
 
@@ -115,9 +123,23 @@ function ejercicio33(){
 
     // Set : si entra en varios elimina valores repetidos .
     // var clear_factores_n = new Set(factores_n);
-    console.log('Numeros por los que se puede dividir :',factores_n);
+    console.log('Factores :',factores_n);
+
+    return factores_n;
 }
 
 ejercicio33();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 34
+
+function ejercicio34(){
+    var total_factores = ejercicio33()
+    
+    var resultado = total_factores.reduce((num1, num2) => num1 + num2);
+    console.log('Reducción del array :',resultado);
+
+}
+ejercicio34();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
