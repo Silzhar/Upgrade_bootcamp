@@ -115,7 +115,7 @@ function ejercicio33(){
         
     }
     
-    var n_tester = 70;
+    var n_tester = 210;
     var factores_n = [];
     
 
@@ -132,14 +132,23 @@ ejercicio33();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 34
-
 function ejercicio34(){
     var total_factores = ejercicio33()
-    
     var resultado = total_factores.reduce((num1, num2) => num1 + num2);
     console.log('Reducción del array :',resultado);
 
 }
+
 ejercicio34();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 35
+function ejercicio35(){
+    var arrayPares = ejercicio33()
+    var pares = arrayPares.filter(elemento => elemento % 2 == 0);
+    console.log('Lista de numeros pares :',pares);
+}
+
+ejercicio35();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
