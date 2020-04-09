@@ -21,7 +21,7 @@ ejercicio31();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 32
-function ejercicio32(){
+function ejercicio32(num){
     function nPrimos(){
         while(contr < contr_max){
             if(contr % 2 !== 0 & contr % 3 !== 0 & contr % 5 !== 0 & contr % 7 !== 0){
@@ -33,122 +33,80 @@ function ejercicio32(){
     }
 
     var contr = 7;
-    var contr_max = 1000;
+    var contr_max = num;
     var list_max = [2,3,5,7];
 
     nPrimos();
-    console.log('Lista de numeros primos : ',list_max);
+    return list_max;
+    // console.log('Lista de numeros primos : ',list_max);
 }
 
-ejercicio32();
-console.log('//----------------------/////----------------------//')
+// ejercicio32();
+// console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio
-function ejercicio33(){
+function ejercicio33(param){
     function factoresN(){
-        if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0) && (n_tester % 7 === 0)){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(3);
-            factores_n.push(5);
-            factores_n.push(7);    
-            factores_n.push(n_tester);    
+        while(inicialize < n_tester){
+            if (n_tester % inicialize == 0){
+                factores_n.push(inicialize);
+            }
+            inicialize++;
         }
-
-        else if((n_tester % 2 == 0) && (n_tester % 5 == 0) && (n_tester % 7 == 0)){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(5);
-            factores_n.push(7);
-            factores_n.push(n_tester);    
-        }
-
-        else if((n_tester % 2 == 0) && (n_tester % 3 == 0) && (n_tester % 5 == 0)){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(3);
-            factores_n.push(5);
-            factores_n.push(n_tester);    
-        }
-
-        else if((n_tester % 2 == 0) && (n_tester % 5 == 0)){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(5);
-            factores_n.push(n_tester);    
-        }
-
-        else if((n_tester % 2 == 0) && (n_tester % 3 == 0)){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(3);
-            factores_n.push(n_tester);    
-        }
-
-        else if(n_tester % 7 == 0){
-            factores_n.push(1);
-            factores_n.push(7)
-            factores_n.push(n_tester);
-        }
-
-        else if(n_tester % 5 == 0){
-            factores_n.push(1);
-            factores_n.push(5);
-            factores_n.push(n_tester);
-        }
-
-        else if(n_tester % 3 == 0){
-            factores_n.push(1);
-            factores_n.push(3);
-            factores_n.push(n_tester);
-        }
-
-        else if(n_tester % 2 == 0){
-            factores_n.push(1);
-            factores_n.push(2);
-            factores_n.push(n_tester);
-        }
-
-        else{
-            console.log('No es divisible');
-        }
-        
+        factores_n.push(n_tester);  
     }
     
-    var n_tester = 210;
+    var inicialize = 0;
+    var n_tester = param;
     var factores_n = [];
     
-
     factoresN();
-
     // Set : si entra en varios elimina valores repetidos .
     // var clear_factores_n = new Set(factores_n);
-    console.log('Factores :',factores_n);
-
-    return factores_n;
+    // console.log('Factores :',factores_n);
+    return factores_n; 
 }
 
-ejercicio33();
-console.log('//----------------------/////----------------------//')
+// ejercicio33();
+// console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 34
-function ejercicio34(){
-    var total_factores = ejercicio33()
-    var resultado = total_factores.reduce((num1, num2) => num1 + num2);
-    console.log('Reducción del array :',resultado);
+// function ejercicio34(){
+//     var total_factores = ejercicio33()
+//     var resultado = total_factores.reduce((num1, num2) => num1 + num2);
+//     console.log('Reducción del array :',resultado);
 
-}
+// }
 
-ejercicio34();
-console.log('//----------------------/////----------------------//')
+// ejercicio34();
+// console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 35
-function ejercicio35(){
-    var arrayPares = ejercicio33()
-    var pares = arrayPares.filter(elemento => elemento % 2 == 0);
-    console.log('Lista de numeros pares :',pares);
-}
+// function ejercicio35(){
+//     var arrayPares = ejercicio33()
+//     var pares = arrayPares.filter(elemento => elemento % 2 == 0);
+//     console.log('Lista de numeros pares :',pares);
+// }
 
-ejercicio35();
-console.log('//----------------------/////----------------------//')
+// ejercicio35();
+// console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 36
+// function ejercicio36(){
+//     var parametro = 600851475143;
+//     var nPrimos = ejercicio32(parametro);
+//     var nFactores = ejercicio33(parametro);
+//     var factoresPrimos = ejercicio33(nPrimos);
+
+//     var suma = factoresPrimos.reduce((numUno, numDos) => numUno + numDos);
+//     var sumaTotal = suma.reduce((numUno, numDos) => numUno + numDos);
+
+//     console.log('N primos',nPrimos);
+//     console.log('N factores',nFactores);
+//     console.log('Factores primos ',factoresPrimos);
+//     console.log('Resultado : ',sumaTotal);
+// }
+
+// ejercicio36();
+// console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
