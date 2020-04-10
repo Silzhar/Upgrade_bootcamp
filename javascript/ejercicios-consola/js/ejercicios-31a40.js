@@ -128,3 +128,22 @@ function ejercicio37(){
 ejercicio37();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 38
+function ejercicio38(){
+    function num_menor(iterable){
+        if (iterable < numMenor){
+            numMenor = iterable;
+        }
+        return numMenor;
+    }
+    var arrayTestInf = [3,12,11,56,2,78,37];
+    var numMenor = arrayTestInf[0];
+
+    arrayTestInf.forEach(num_menor);
+    console.log('Numero mas bajo :',numMenor);
+
+
+}
+ejercicio38();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
