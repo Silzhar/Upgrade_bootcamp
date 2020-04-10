@@ -144,6 +144,23 @@ function ejercicio38(){
 
 
 }
+
 ejercicio38();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 39
+function ejercicio39(){
+    function sinDuplicados(list){
+        var list_clear = new Set(list);
+        return list_clear
+    }
+
+    var list_n = [2,33,44,6,17,17,89,44];
+    var new_list = sinDuplicados(list_n);
+
+    console.log('Nuevo array sin duplicados :',new_list);
+}
+
+ejercicio39();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
