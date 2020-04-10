@@ -110,3 +110,21 @@ function ejercicio33(param){
 // ejercicio36();
 // console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 37
+function ejercicio37(){
+    function num_mayor(numero){
+        if (numero > numMayor){
+            numMayor = numero;
+        }
+        return numMayor;
+    }
+    var arrayTest = [3,12,11,56,2,78,37];
+    var numMayor = 0;
+
+    arrayTest.forEach(num_mayor);
+    console.log('Numero más alto :',numMayor);
+}
+
+ejercicio37();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
