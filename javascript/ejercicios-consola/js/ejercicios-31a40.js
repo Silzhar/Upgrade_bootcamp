@@ -164,3 +164,27 @@ function ejercicio39(){
 ejercicio39();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 40
+function ejercicio40(){
+
+    var arrayTest = [2,33,44,6,17,17,89,44];
+    var newListTest = [];
+    var list_duplicados = [];
+
+    arrayTest.forEach((iterado, indice) => {
+        newListTest = arrayTest;
+        // Eliminar elemento a comparar .
+        newListTest.splice(indice,1);
+        // Buscar elemento repetido .
+        if (newListTest.indexOf(iterado) != -1 & list_duplicados.indexOf(iterado) == -1){
+            list_duplicados.push(iterado)
+        }
+
+    });
+
+    console.log('Numeros repetidos :',list_duplicados);
+}
+
+ejercicio40();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
