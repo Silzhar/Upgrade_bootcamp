@@ -41,6 +41,21 @@ function ejercicio42(){
     
 }
 
+console.log('Ejercicio 42');
 ejercicio42();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 43
+function ejercicio43(){
+    function diferenciasCuadrados(){
+        var num_max = 1000;
+        ejercicio41(num_max);
+    }
+
+    console.log('Ejercicio 43');
+    diferenciasCuadrados();
+}
+
+ejercicio43();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
