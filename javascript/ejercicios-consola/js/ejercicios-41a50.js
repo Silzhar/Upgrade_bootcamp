@@ -2,6 +2,8 @@
 var max = 10;
 var totalSumaCuadrados = 0;
 var totalcuadradosSuma = 0;
+var listsumaCuadrados = [];
+
 
 function ejercicio41(max){
     function diferenciaCuadrados(){
@@ -28,10 +30,9 @@ function ejercicio41(max){
     var controller = 0;
     var control_max = max;
     var list_num = [];
-    var listsumaCuadrados = [];
     
     diferenciaCuadrados();
-    
+       
 }
 
 ejercicio41(max);
@@ -65,12 +66,30 @@ console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // ejercicio 44
 function ejercicio44(){
-    var total_suma = ejercicio43();
+    
     console.log('Suma total de los cuadrados :',totalcuadradosSuma);
 
 }
 
 console.log('Ejercicio 44');
 ejercicio44();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 45
+
+// repetido 
+
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 46
+function ejercicio46(){
+    function pares(nums){
+        return nums % 2 == 0;
+    }
+
+    var num_pares = listsumaCuadrados.filter(pares);
+    console.log('Lista de exponentes pares :',num_pares);
+}
+
+ejercicio46();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
