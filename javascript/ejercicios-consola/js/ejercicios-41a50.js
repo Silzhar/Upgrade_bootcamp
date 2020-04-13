@@ -93,3 +93,41 @@ function ejercicio46(){
 ejercicio46();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 47
+function ejercicio47(){
+    var list_primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+        31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 , 97];
+    
+    function lugarPrimo(p){
+        var posicionPrimo = list_primos[p];
+        console.log('En la posición dada se encuentra el número :',posicionPrimo);
+    }
+
+    lugarPrimo(4);
+}
+
+ejercicio47();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 48
+function ejercicio48(){
+    function numeroTriangular(N){
+        while(inicio <= N){
+            numeros.push(inicio);
+            inicio++;
+        };
+
+        var suma_num = numeros.reduce((numUno, numDos) => numUno + numDos);
+        return suma_num;
+    }
+
+    var inicio = 0;
+    var numeros = [];
+
+    var triangular = numeroTriangular(7);
+    console.log(triangular);
+}
+
+ejercicio48();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
