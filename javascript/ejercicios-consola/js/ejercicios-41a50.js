@@ -1,5 +1,7 @@
 // Ejercicio 41
 var max = 10;
+var totalSumaCuadrados = 0;
+var totalcuadradosSuma = 0;
 
 function ejercicio41(max){
     function diferenciaCuadrados(){
@@ -11,8 +13,8 @@ function ejercicio41(max){
             list_num.push(controller);
         }
 
-        var totalSumaCuadrados = listsumaCuadrados.reduce((num1, num2) => num1 + num2);
-        var totalcuadradosSuma = Math.pow(list_num.reduce((num1, num2) => num1 + num2), 2);
+        totalSumaCuadrados = listsumaCuadrados.reduce((num1, num2) => num1 + num2);
+        totalcuadradosSuma = Math.pow(list_num.reduce((num1, num2) => num1 + num2), 2);
         var resultado = [];
         resultado.push(totalcuadradosSuma - totalSumaCuadrados);
 
@@ -20,6 +22,7 @@ function ejercicio41(max){
         console.log('Total cuadrado de la suma de los numeros  : ',totalcuadradosSuma);
         console.log('Diferencia entre los cuadrados : ',resultado);
 
+        return totalcuadradosSuma, totalSumaCuadrados;
     }
 
     var controller = 0;
@@ -51,11 +54,23 @@ function ejercicio43(){
         var num_max = 1000;
         ejercicio41(num_max);
     }
-
+    
     console.log('Ejercicio 43');
     diferenciasCuadrados();
+
 }
 
 ejercicio43();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// ejercicio 44
+function ejercicio44(){
+    var total_suma = ejercicio43();
+    console.log('Suma total de los cuadrados :',totalcuadradosSuma);
+
+}
+
+console.log('Ejercicio 44');
+ejercicio44();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
