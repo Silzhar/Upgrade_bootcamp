@@ -110,24 +110,37 @@ ejercicio47();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 48
-function ejercicio48(){
-    function numeroTriangular(N){
-        while(inicio <= N){
-            numeros.push(inicio);
-            inicio++;
-        };
-
-        var suma_num = numeros.reduce((numUno, numDos) => numUno + numDos);
-        return suma_num;
-    }
-
+// function ejercicio48(){
+function numeroTriangular(N){
     var inicio = 0;
     var numeros = [];
 
-    var triangular = numeroTriangular(7);
-    console.log(triangular);
+    while(inicio <= N){
+        numeros.push(inicio);
+        inicio++;
+    };
+
+    suma_num = numeros.reduce((numUno, numDos) => numUno + numDos);
+    return numeros;
 }
 
-ejercicio48();
+var suma_num = 0;
+
+numeroTriangular(7);
+console.log('Valor de triangular :',suma_num);
+// }
+
+// ejercicio48();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 49
+function numerosTriangulares(){
+    var test = numeroTriangular(14);
+    console.log('Valores hasta N :',test);
+
+}
+
+numerosTriangulares();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+
