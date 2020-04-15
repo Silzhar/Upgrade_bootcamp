@@ -90,6 +90,7 @@ function ejercicio46(){
     console.log('Lista de exponentes pares :',num_pares);
 }
 
+console.log('Ejercicio 46');
 ejercicio46();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
@@ -106,6 +107,7 @@ function ejercicio47(){
     lugarPrimo(4);
 }
 
+console.log('Ejercicio 47');
 ejercicio47();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
@@ -127,6 +129,8 @@ function numeroTriangular(N){
 var suma_num = 0;
 
 numeroTriangular(7);
+
+console.log('Ejercicio 48');
 console.log('Valor de triangular :',suma_num);
 // }
 
@@ -140,6 +144,7 @@ function numerosTriangulares(){
 
 }
 
+console.log('Ejercicio 49');
 numerosTriangulares();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
@@ -155,6 +160,7 @@ function ejercicio50(){
     console.log('Lista de números pares :',list_pares);
 }
 
+console.log('Ejercicio 50');
 ejercicio50();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
@@ -170,6 +176,30 @@ function ejercicio51(){
     console.log('Lista de números impares :',list_impares);
 }
 
+console.log('Ejercicio 51');
 ejercicio51();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejericio 52
+function ejercicio52(){
+    var list_triangulares = numeroTriangular(20);
+    var list_primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+        31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 , 97];
+    var primos_triangulares = [];
+   
+    for(var parametro1 = 0;parametro1 < list_triangulares.length; parametro1++){
+        for(var parametro2 = 0;parametro2 < list_primos.length; parametro2++){
+            if(list_triangulares[parametro1] === list_primos[parametro2]){
+                primos_triangulares.push(list_triangulares[parametro1]);
+            }
+        }
+
+    }
+
+    console.log('Lista de números triangulares de N :',primos_triangulares);     
+    }
+
+console.log('Ejercicio 52');
+ejercicio52();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
