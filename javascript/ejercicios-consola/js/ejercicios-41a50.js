@@ -135,12 +135,25 @@ console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 // Ejercicio 49
 function numerosTriangulares(){
-    var test = numeroTriangular(14);
-    console.log('Valores hasta N :',test);
+    var num_hasta_fin = numeroTriangular(14);
+    console.log('Valores hasta N :',num_hasta_fin);
 
 }
 
 numerosTriangulares();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 50
+function ejercicio50(){
+    var total_num = numeroTriangular(20);
+    function numPares(numero){
+        return numero % 2 == 0;
+    }
+    var list_pares = total_num.filter(numPares );
+    console.log('Lista de números pares :',list_pares);
+}
+
+ejercicio50();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
 
