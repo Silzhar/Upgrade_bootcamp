@@ -146,9 +146,11 @@ console.log('//----------------------/////----------------------//')
 // Ejercicio 50
 function ejercicio50(){
     var total_num = numeroTriangular(20);
+
     function numPares(numero){
         return numero % 2 == 0;
     }
+
     var list_pares = total_num.filter(numPares );
     console.log('Lista de números pares :',list_pares);
 }
@@ -156,4 +158,18 @@ function ejercicio50(){
 ejercicio50();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 51
+function ejercicio51(){
+    var array_num = numeroTriangular(20);
 
+    function numImpares(num){
+        return num % 2 != 0;
+    }
+
+    var list_impares = array_num.filter(numImpares);
+    console.log('Lista de números impares :',list_impares);
+}
+
+ejercicio51();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
