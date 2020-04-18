@@ -203,3 +203,43 @@ console.log('Ejercicio 52');
 ejercicio52();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 53
+function triangularesNoPrimos(){
+    var triangulares = numeroTriangular(20);
+    var list_primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+        31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 , 97];
+    // var list_no_primos = [];
+
+    // function noPrimos(numero){
+    //     if(numero === list_primos[numero]){
+    //         triangulares.pop(numero);
+    //         // return numero;
+    //     }
+    // }
+
+    var no_primos = triangulares.filter(numero => list_primos !== numero);
+    console.log('Triangulares no primos :',no_primos);
+}
+
+console.log('Ejercicio 53');
+triangularesNoPrimos();
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicio 57
+function extraeDigitos(c){
+    var cadenaSplit = c.split(' ');
+    for (numero of cadenaSplit){
+        new_cadena.push(parseInt(numero));
+    }
+    
+}
+
+var cadena = '1 2 3 4 5';
+var new_cadena = [];
+
+extraeDigitos(cadena);
+
+console.log('Ejercicio 57');
+console.log('Neva cadena : ',new_cadena )
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
