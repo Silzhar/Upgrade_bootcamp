@@ -234,12 +234,27 @@ function extraeDigitos(c){
     
 }
 
-var cadena = '1 2 3 4 5';
+var cadena = '1 2 3 4 5 6 7 8 9 10 11 12';
 var new_cadena = [];
 
 extraeDigitos(cadena);
 
 console.log('Ejercicio 57');
 console.log('Neva cadena : ',new_cadena )
+console.log('//----------------------/////----------------------//')
+//-----------------------------------/////////----------------/////////---------------------------//
+// Ejercicios 58
+function sumaDIgitos(){
+    new_cadena.length = 0;
+    var new_extraeDigitos = extraeDigitos(suma_digitos);
+    
+    var suma_cadena = new_cadena.reduce((n_uno, n_dos) => n_uno + n_dos);
+    console.log('Suma de la nueva cadena : ',suma_cadena )
+
+}
+
+var suma_digitos = "9 4 5 8 2 10 3 6";
+
+sumaDIgitos();
 console.log('//----------------------/////----------------------//')
 //-----------------------------------/////////----------------/////////---------------------------//
