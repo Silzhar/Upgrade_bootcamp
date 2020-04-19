@@ -1,0 +1,31 @@
+@media(max-width: 600px){
+    .titulo{
+        font-size: 10vh;
+    }
+    .contenido{
+        font-size: 5vh;
+
+    }
+}
+
+@media(max-width: 900px){
+    .titulo{
+        font-size: 15vh;
+    }
+    .contenido{
+        font-size: 10vh;
+    }
+}
+
+@media(max-width: 1200px){
+    .titulo{
+        font-size: 20vh;
+    }
+    .contenido{
+        font-size: 10vh;
+    }
+}
+
+body{
+    background-color: blue;
+}
