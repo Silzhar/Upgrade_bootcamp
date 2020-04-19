@@ -1,0 +1,28 @@
+
+@media(min-width: 440px){
+    .titulo{
+        font-size: 10vh;
+    }
+    .contenido{
+        font-size: 5vh;
+
+    }
+}
+
+@media(min-width: 768px)and(width: 989px){
+    .titulo{
+        font-size: 15vh;
+    }
+    .contenido{
+        font-size: 10vh;
+    }
+}
+
+@media(min-width: 990px){
+    .titulo{
+        font-size: 20vh;
+    }
+    .contenido{
+        font-size: 10vh;
+    }
+}
