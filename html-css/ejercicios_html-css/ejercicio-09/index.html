@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link id="dia" rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body id="dark-mode">
+    <div class="cartas">
+        <div class="cartas1">
+            <div class="mortyC">
+                <img src="assets/img/morty.jpeg" class="morty"> 
+                <p class="titulo">Morty Smith</p> 
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p>
+            </div>
+            <div class="rickC">
+                <img src="assets/img/rick.jpeg" class="rick">
+                <p class="titulo">Rick Sanchez</p>
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p>
+            </div>
+            <div class="mortyC">
+                <img src="assets/img/morty.jpeg" class="morty"> 
+                <p class="titulo">Morty Smith</p> 
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p> 
+            </div>
+        </div>
+    </div>
+        <div class="cartas2"> 
+            <div class="rickC">
+                <img src="assets/img/rick.jpeg" class="rick">
+                <p class="titulo">Rick Sanchez</p>
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p>
+            </div>
+            <div class="mortyC">
+                <img src="assets/img/morty.jpeg" class="morty">
+                <p class="titulo">Morty Smith</p>
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p>  
+            </div>
+            <div class="rickC">
+                <img src="assets/img/rick.jpeg" class="rick">
+                <p class="titulo">Rick Sanchez</p>
+                <p class="contenido">Este es un personaje de "Las Aventuras de Rick y Morty"</p>
+            </div>
+        </div>
+    <button class="noche" onclick="cambio()">ACEPTAR</button> 
+
+    <script>
+
+        var dia = false;
+        function cambio(){
+            if(dia == true){
+                document.getElementById('dark-mode').style.backgroundColor="white";
+                dia = false;
+            }else{
+                document.getElementById('dark-mode').style.backgroundColor="black";
+                dia = true;                
+            }  
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
