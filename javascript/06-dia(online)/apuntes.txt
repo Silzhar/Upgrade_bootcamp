@@ -1,0 +1,11 @@
+// Para obtener por clase .
+1 - getElementsByClassName
+
+// Por el nombre de la etiqueta html .
+2 -  getElementsByTagName 
+
+// Selector genérico .
+3 - querySelector 
+
+    // querySelector por clase .
+    var section = docuent.querySelector('.section');
