@@ -1,0 +1,8 @@
+
+// Notion .
+
+https://www.notion.so/Sesi-n-1-Typescript-Angular-Intro-7308abae9c654bfab124130cbb257d57
+
+
+// GitLab de clases Angular.
+https://gitlab.com/upgrade-hub/fsd-pt-nov-2019
