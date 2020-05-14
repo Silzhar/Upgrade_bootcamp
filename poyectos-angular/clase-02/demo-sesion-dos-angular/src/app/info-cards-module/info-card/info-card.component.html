@@ -1,0 +1,21 @@
+
+<div class="info-card" *ngIf="config">
+    <img class="info-card-image" src="{{ config.image }}" alt="">
+    <p class="info-card-section-name" (click)="sectionClicked()">Sección: {{ config.sectionName }}</p>
+    
+    <!-- SI TENGO TITULO LO PINTO -->
+    <p *ngIf="config.title" class="info-card-title" (click)="titleClicked()">
+        Título: {{ config.title }}
+    </p>
+
+    <!-- SI NO TENGO TITULO PINTO OTRA COSA -->
+    <button *ngIf="!config.title">Generar título</button>
+
+    <p class="info-card-description">{{ config.description }}</p>
+
+    <!-- ETIQUETAS -->
+    <ul *ngIf="config.tags" class="info-card-tags" [ngClass]="{'too-much-tags': config.tags.length > 5}">
+        <li class="info-card-tag-item" (click)="tagClickedCallback(tag)" *ngFor="let tag of config.tags">
+            {{ tag }}
+        </li>
+    </ul>

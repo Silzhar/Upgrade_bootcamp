@@ -1,0 +1,11 @@
+1 - ng newdemo-sesion-dos-angular
+
+2 - cd demo-sesion-dos-angular/
+
+3 -  ng serve --open
+
+4 - cerrar proyecto para generar modulos y componentes
+
+5 -  cd src/app/info-cards-module
+
+6 - ng generate component info-card

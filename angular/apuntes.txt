@@ -6,3 +6,23 @@ https://www.notion.so/Sesi-n-1-Typescript-Angular-Intro-7308abae9c654bfab124130c
 
 // GitLab de clases Angular.
 https://gitlab.com/upgrade-hub/fsd-pt-nov-2019
+
+
+// Arrancar (32bits).
+arrancar con "npm start"
+
+
+// Abrir proyecto en Angular .
+	ng serve --open
+	
+	// Se abre :
+	Date: 2020-05-11T10:20:48.318Z - Hash: b2ec4066e322894d2943 - Time: 16477ms
+	** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+// Crear modulo : directamente en el directorio 
+ng generate module shared 
+
+
+// Crear componente .
+ng generate component <name> [options]

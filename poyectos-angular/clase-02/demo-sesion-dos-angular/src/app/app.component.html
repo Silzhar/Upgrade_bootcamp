@@ -1,0 +1,15 @@
+<router-outlet></router-outlet>
+
+<h1>clase 2  ----------------------  12-05-2020</h1>
+
+
+<app-info-card (tagClickedEvent)="userClickedOnTag($event)" [config]="configForCardOne"></app-info-card>
+<app-info-card [config]="configForCardTwo"></app-info-card>
+<app-info-card (tagClickedEvent)="userClickedOnTag($event)" [config]="configForCardThree"></app-info-card>
+<app-info-card [config]="configForCardFour"></app-info-card>
+<app-info-card></app-info-card>
+
+<p>Al usuario le gusta:</p>
+<ul>
+    <li *ngFor="let interest of userInterests">{{ interest }}</li>
+</ul>
