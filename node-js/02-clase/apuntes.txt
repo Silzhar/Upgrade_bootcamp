@@ -1,0 +1,32 @@
+// Iniciar .
+npm init -y
+
+// Crear servidor basico con express .
+npm install --save express
+
+// Crear el index.js .
+    const express = require('express');
+    // El server es instancia de express .
+    const server = express();
+    const PORT = 3000;
+    server.listen(PORT, () => {
+        console.log(`Server running in localhost:${PORT}`);
+    })
+
+// Incluirlo en package.json en scripts . 
+// El "start": "node ." es = node index.js, arranca el MAIN de proyecto .
+    "scripts": {
+        "start": "node ."
+        },
+
+// Instalar nodemon .
+npm i -D nodemon
+
+// Incluirlo en package.json en scripts . 
+"scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+
+// Arrancar con nodemon .
+npm run dev
