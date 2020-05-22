@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-detail-header.component.scss']
 })
 export class StudentDetailHeaderComponent implements OnInit {
+  title: string;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
+    this.title = 'Cabecera de alumnos';
+    console.log(this.title);
   }
 
 }
