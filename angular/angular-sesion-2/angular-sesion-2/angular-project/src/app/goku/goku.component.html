@@ -1,0 +1,29 @@
+
+<div class="goku">
+    <h2 class="goku__name">Goku</h2>
+
+    <div class="goku__tech">
+        <h3 class="goku__title">Técnicas:</h3>
+
+        <!-- ngClass : A la izq nombre de la clase,dcha condición en la que se añade. -->
+        <div class="goku__tech-item" *ngFor='let technique of techniques'
+            [ngClass]="{
+                'goku__tech-item--learned': techniquesLearned.includes(technique),
+                'goku__tech-item--learned-by-son' : techniquesLearnedGohan.includes(technique),
+                'goku__tech-item--learned-by-grandson' : techniquesLearnedByVidel.includes(technique)
+            }"
+        >
+            <span> {{ technique.name }} </span>
+            <button (click)='learTech(technique)'>APRENDER</button>
+            
+
+        </div>
+    </div>
+</div>
+
+
+<app-gohan 
+    (techniquesLearnedInfo)="gohanLearnedNewTech($event)"
+    (techniquesLearnedByVidelInfo)="videlLearnedNewTech($event)"
+    [techniquesLearn]="techniquesToGohan"
+></app-gohan>

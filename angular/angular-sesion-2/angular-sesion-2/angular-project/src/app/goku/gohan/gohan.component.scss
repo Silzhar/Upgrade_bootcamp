@@ -1,0 +1,31 @@
+:host{
+    display: flex;
+    margin: 20px;
+}
+
+
+.gohan{
+    background-color: black;
+    border: 4px solid #71b904;
+    display: inline-block;
+    padding: 20px;
+
+    &__name{
+        color:#71b904;
+    }
+
+    &__techniques{
+        color: aqua;
+    }
+
+    &__title{
+
+    }
+
+    &__tech-item{
+        // margin: 0;
+        padding: 10px;
+        text-transform: capitalize;
+        text-align: left;
+    }
+}

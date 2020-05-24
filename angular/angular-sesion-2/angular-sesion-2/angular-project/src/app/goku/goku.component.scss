@@ -1,0 +1,50 @@
+host{
+    justify-content: space-between;
+}
+
+.goku{
+    background-color: black;
+    border: 4px solid orangered;
+    display: inline-block;
+    padding: 20px;
+
+    &__name{
+        color:orangered;
+    }
+
+    &__tech{
+        color: aqua;
+    }
+
+    &__title{
+
+    }
+
+    &__tech-item{
+        // margin: 0;
+        padding: 10px;
+        text-transform: capitalize;
+        text-align: left;
+
+        &--learned{
+            color: white;
+            font-weight: 600;
+        }
+
+        &--learned-by-son{
+            color: greenyellow;
+            text-decoration-style: double;
+        }
+
+        &--learned-by-grandson{
+            color: purple;
+            padding-left: 15px;
+        }
+
+    }
+
+    &__learn-button {
+        margin-left: 15px;
+    }
+
+}
