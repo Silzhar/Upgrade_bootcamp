@@ -1,0 +1,8 @@
+
+<ul>
+    <li *ngFor='let user of userList'> 
+        <label for="">{{ user.name }}</label>
+        <span> - </span>
+        <a [routerLink]="['/user-list', user.id]">Ver usuario</a>
+    </li>
+</ul>

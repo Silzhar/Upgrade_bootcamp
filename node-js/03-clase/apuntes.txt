@@ -1,0 +1,11 @@
+npm init -y
+
+ npm i express
+
+ npm i  -D nodemon
+
+ npm i mongoose
+
+
+// arrancar y conectar a la base de datos
+npm run dev
