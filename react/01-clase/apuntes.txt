@@ -1,0 +1,11 @@
+
+
+
+// Arrancar npm run start
+
+// Editar settings de Visual Studio. Archivo settings.json.
+// "control ,", escribir emmet , eddit settings.json
+"emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}

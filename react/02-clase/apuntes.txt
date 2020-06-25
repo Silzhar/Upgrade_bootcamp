@@ -1,0 +1,6 @@
+npm i node-sass
+
+npm install prop-types  // buscar como instalar
+
+npx create-react-app counter-work
+
