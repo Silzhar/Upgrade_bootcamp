@@ -1,0 +1,17 @@
+<div class="videl">
+    <h2 class="videl__name">Videl</h2>
+
+    <div class="videl__techniques">
+        <h3 class="videl__title">Técnicas:</h3>
+
+    <div 
+        class="videl__tech-item" 
+        *ngFor='let technique of techniquesLearn'
+        [ngClass]="{ 'videl__tech-item--learned' : techniquesLearned.includes(technique) }"
+    >
+        <span> {{ technique.name }} </span>
+        <button class="videl__learn-button" (click)="learnTech(technique)">APRENDER</button>
+        </div>
+    </div>
+</div>
+

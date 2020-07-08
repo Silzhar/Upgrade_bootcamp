@@ -30,15 +30,29 @@ class Videoconsola {
 }
 
 class Xbox extends Videoconsola {
-  // XXXX
+  modoOnline: boolean;
+  constructor(nombre: string,color: string, portatil: boolean, modoOnline: boolean){
+  super(nombre, color, portatil);
+    this.modoOnline = modoOnline;
+  }
 }
 
 class PlayStation extends Videoconsola {
-  // XXXX
+  modoOnline: boolean;
+  precioModoOnline: number;
+  constructor(nombre: string,color: string, portatil: boolean, modoOnline: boolean, precioModoOnline: number = 30){
+  super(nombre, color, portatil);
+    this.modoOnline = modoOnline;
+    this.precioModoOnline = precioModoOnline;
+  }
 }
 
 class GameBoy extends Videoconsola {
-  // XXXX
+  numPilas: number;
+  constructor(nombre: string,color: string, portatil: boolean = true, numPilas: number){
+  super(nombre, color, portatil);
+    this.numPilas = numPilas;
+  }
 }
 
 const xbox: Xbox = new Xbox('Xbox 360', 'Blanca', false, true);

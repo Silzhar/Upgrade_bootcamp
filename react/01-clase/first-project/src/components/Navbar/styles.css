@@ -1,0 +1,16 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.Navbar__list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar__list > li {
+    padding: 0 0.5rem;
+}

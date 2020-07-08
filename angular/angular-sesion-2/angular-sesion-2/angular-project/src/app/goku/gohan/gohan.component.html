@@ -1,0 +1,23 @@
+<div class="gohan">
+    <h2 class="gohan__name">Gohan</h2>
+
+    <div class="gohan__techniques">
+        <h3 class="gohan__title">Técnicas:</h3>
+
+    <div class="gohan__tech-item" 
+    *ngFor='let technique of techniquesLearn'
+    [ngClass]="{
+        'gohan__tech-item--learned' : techniquesLearned.includes(technique),
+        'gohan__tech-item--learned-by-son' : techniquesLearnedByVidel.includes(technique)
+    }"
+    >
+    <span>{{ technique.name }} </span>
+            <button class="gohan__learn-button" (click)="learnTech(technique)">APRENDER</button>
+        </div>
+    </div>
+</div>
+
+<app-videl 
+    (newTechniqueLearnedInfo)="videlLearnedNewTech($event)" [techniquesLearn]="techniquesToVidel">
+</app-videl>
+
