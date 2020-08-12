@@ -1,5 +1,10 @@
 // Utilizar la API de Heroku para hacer el registro.
-const registerUrl = 'https://upgrade-auth.herokuapp.com/api/auth/register';
+const BASE_URL = 'https://upgrade-auth.herokuapp.com/api/auth/register';
+const registerUrl = `${BASE_URL}/auth/register`;
+const loginrUrl = `${BASE_URL}/auth/login`;
+const checkSessionUrl = `${BASE_URL}/auth/check-session`;
+
+
 
 /**
  * Parámetros de userdata.
@@ -26,3 +31,49 @@ export const register = async (userdata) => {
   }
   return jsonResponse;
 };
+
+/**
+ * Parámetros de userdata.
+ * @param {Objet} userdata
+ * @param {string} userdata.email
+ * @param {string} userdata.password
+ */
+export const login = async (userdata) => {
+  const response = await fetch(loginrUrl, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify(userdata),
+  });
+  const jsonResponse = await response.json();
+
+  if (!response.ok) {
+    console.log(jsonResponse);
+    throw new Error('Error!');
+  }
+  return jsonResponse;
+};
+
+export const checkSession = async () => {
+  const response = await fetch(checkSessionUrl, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    // Envía la cookie al servidor.
+    credentials: 'include',
+  });
+
+  // Recibimos el objeto del servidor de Node.
+  const jsonResponse = await response.json();
+
+  if (!response.ok) {
+    console.log(jsonResponse.message);
+    throw new Error('Error!');
+  }
+  return jsonResponse.data;
+}

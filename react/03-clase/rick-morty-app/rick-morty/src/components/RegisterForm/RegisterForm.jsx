@@ -56,7 +56,7 @@ export default class RegisterForm extends Component {
           />
         </label>
 
-        <label htmlFor="email" className="RegisterForm_label">
+        <label htmlFor="email" className="RegisterForm_label" placeholder="EMail">
           <p>Correo electrónico:</p>
           <input
             type="email"
@@ -66,8 +66,8 @@ export default class RegisterForm extends Component {
           />
         </label>
 
-        <label htmlFor="password" className="RegisterForm_label">
-          <p>Correo electrónico:</p>
+        <label htmlFor="password" className="RegisterForm_label" placeholder="Password">
+          <p>Contraseña:</p>
           <input
             type="password"
             name="password"

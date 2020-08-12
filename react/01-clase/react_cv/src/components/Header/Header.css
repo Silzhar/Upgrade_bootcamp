@@ -1,0 +1,45 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: chocolate;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.75);
+}
+
+.Header_avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.75);
+}
+
+.Header_list{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 100px;
+   
+}
+
+@media screen and (max-width: 600px){
+    .Header{
+        width: 80%;
+        
+    }
+
+    .Header_avatar{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .Header_list{
+        display: block;
+        font-weight: bold;
+        font-size: 0.6rem;       
+    }
+}
