@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+
+.App__sections {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.App__sections > section {
+  flex-basis: 50%;
+}
+
+@media (max-width: 600px) {
+  .App__sections > section {
+    flex-basis: 100%;
+  }
+}
