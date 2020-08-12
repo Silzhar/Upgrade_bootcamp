@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import { register } from '../../api/authentication';
+import { login } from '../../api/authentication';
+import { checkSession } from '../../api/authentication';
 
 import './LoginForm.scss';
 
@@ -13,12 +14,21 @@ export default class LoginForm extends Component {
     error: null,
   };
 
+  hancleOnCLick = async () => {
+    try {
+      const data = await checkSession();
+      console.log('User :', data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   handleSubmit = async (event) => {
     event.prevetDefault();
     // console.log('Submmitting form');
     
     try {
-        const data = await register(this.state.form);
+        const data = await login(this.state.form);
         console.log(data);
 
     } catch (err) {
@@ -57,7 +67,7 @@ export default class LoginForm extends Component {
         </label>
 
         <label htmlFor="password" className="LoginForm_label">
-          <p>Correo electrónico:</p>
+          <p>Contraseña:</p>
           <input
             type="password"
             name="password"

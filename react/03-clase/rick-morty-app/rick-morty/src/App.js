@@ -1,53 +1,43 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.scss';
-import { getBaseData, getDataFromUrl } from './services/rickMorty'
+
+import RegisterForm from './components/RegisterForm';
+import LoginForm from './components/LoginForm';
+import { checkSession } from './api/authentication';
+import Home from './components/Home/Home';
+import CharacterList from './components/CharacterList';
 
 class App extends React.Component {
-  state = {
-    characters: [],
-    nextPage: null,
-  }
+  hancleOnCLick = async () => {
+    try {
+      const data = await checkSession();
+      console.log('User :', data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
 
-  async componentDidMount() {
-    const baseData = await getBaseData();
-
-    this.setState({
-      characters: baseData.results,
-      nextPage: baseData.nextPage,
-    })
-  }
-
-  handleLoadData = async() => {
-    const dataFromUrl = await getDataFromUrl(this.state.nextPage);
-
-    this.setState((prevState) => ({
-      characters: [...prevState.characters ,...dataFromUrl.results],
-      nextPage: dataFromUrl.nextPage,
-    }))
-  }
-
-  render(){
-    console.log(this.state)
+  render() {
+    console.log(this.state);
     return (
-      <div className="App">
-        <h1>Rick y Morty</h1>
+      <Router>
+        <div className="App">
+          <h1>Rick y Morty</h1>
+          <Switch>
+            <Route path="/characters" exact component={CharacterList} />
+            <Route path="/register" exact component={RegisterForm} />
+            <Route path="/login" exact component={LoginForm} />
+            <Route path="/" exact component={Home} />
+          </Switch>
+          {/* <RegisterForm /> */}
 
-        <div>
-          <ul>
-          {this.state.characters.map((char) => {
-            return <li key={char.id}>
-              <h3>Nombre: {char.name}</h3>
-              <img src={char.image} alt=""/>
-            </li>
-          })}
-          </ul>
-
-          <button onClick={ this.handleLoadData }>Cargar más</button>
+          <button onClick={this.hancleOnCLick}>Comprobar sessión</button>
         </div>
-      </div>
+      </Router>
     );
   }
-  
 }
 
 export default App;
