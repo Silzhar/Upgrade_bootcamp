@@ -12,6 +12,7 @@ export class PhoneListComponent implements OnInit {
   public contactList: Contact[] = [];
   public newContactFormGroup: FormGroup = null;
   public editContactFormGroup: FormGroup = null;
+  public idEdited: number = 0;
 
   constructor(private contactsService: ContactsService) {
   }
@@ -45,12 +46,22 @@ export class PhoneListComponent implements OnInit {
 
   public editContact(id: number, name: string, phone: number) {
     // this.titulo = 'Editar contacto:';
-    // this.idEdited = id;
+    this.idEdited = id;
     this.editContactFormGroup = new FormGroup({
       name: new FormControl(name, Validators.required),
       phone: new FormControl(phone, Validators.required),
     });
   }
+
+  public onEditContactSubmit(){
+    const editname: string = this.editContactFormGroup.get('name').value;
+    const editphone: number = this.editContactFormGroup.get('phone').value;
+    this.contactsService.editContact(this.idEdited, editname, editphone);
+    this.updateContactList();
+    this.editContactFormGroup.reset();
+    this.ngOnInit();
+   }
+
 
   public removeContact(id: number) {
     this.contactsService.removeContact(id);

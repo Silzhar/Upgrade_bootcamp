@@ -50,3 +50,17 @@
   </div>
   <button data-e2e="save-contact-button" type="submit">Guardar</button>
 </form>
+
+<form class="new-contact-form" *ngIf="editContactFormGroup" [formGroup]="editContactFormGroup" (ngSubmit)="onEditContactSubmit()">
+
+  <div class="new-contact-form__row">
+     <label for="name">Editar nombre:</label>
+     <input id="name" data-e2e="name-input" type="text" formControlName="name">
+  </div>
+  <div class="new-contact-form__row">
+     <label for="phone">Editar teléfono:</label>
+     <input id="phone" data-e2e="phone-input" type="number" formControlName="phone">
+  </div>
+  <button data-e2e="save-contact-button" type="submit">EDITAR</button>
+</form>
+
