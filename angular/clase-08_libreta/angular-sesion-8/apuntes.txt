@@ -1,0 +1,2 @@
+// Arrancar test
+npm run test

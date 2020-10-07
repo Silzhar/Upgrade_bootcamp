@@ -1,0 +1,52 @@
+<h2>Contactos:</h2>
+<table class="phone-table">
+  <thead class="phone-table__head">
+    <tr>
+      <th class="phone-table__column-name">Nombre</th>
+      <th class="phone-table__column-name">Teléfono</th>
+    </tr>
+  </thead>
+  <tbody data-e2e="contact-list-body" class="phone-table__body">
+    <tr *ngFor="let contact of contactList">
+      <td class="phone-table__cell">{{ contact.name }}</td>
+      <td class="phone-table__cell">{{ contact.phone }}</td>
+      <td class="phone-table__cell">
+        <button
+          class="edit"
+          type="button"
+          (click)="editContact(contact.id, contact.name, contact.phone)"
+        >
+          Editar
+        </button>
+      </td>
+      <td class="phone-table__cell">
+        <button type="button" (click)="removeContact(contact.id)">
+          Borrar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Añadir contacto:</h2>
+<form
+  class="new-contact-form"
+  *ngIf="newContactFormGroup"
+  [formGroup]="newContactFormGroup"
+  (ngSubmit)="onNewContactSubmit()"
+>
+  <div class="new-contact-form__row">
+    <label for="name">Nombre:</label>
+    <input id="name" data-e2e="name-input" type="text" formControlName="name" />
+  </div>
+  <div class="new-contact-form__row">
+    <label for="phone">Teléfono:</label>
+    <input
+      id="phone"
+      data-e2e="phone-input"
+      type="number"
+      formControlName="phone"
+    />
+  </div>
+  <button data-e2e="save-contact-button" type="submit">Guardar</button>
+</form>
